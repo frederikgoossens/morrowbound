@@ -51,7 +51,7 @@ const Team = () => {
               {teamMembers.map((member, index) => (
                 <div 
                   key={index}
-                  className="zen-card text-center lg:text-left animate-on-scroll"
+                  className="bg-blue-100 rounded-xl shadow-zen border border-blue-200 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1 text-center lg:text-left animate-on-scroll"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
