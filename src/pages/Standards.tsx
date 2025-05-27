@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -46,7 +45,7 @@ const Standards = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-blue-50">
+    <div className="min-h-screen bg-beige-50">
       <Navigation />
       
       <main className="pt-32 pb-20">
