@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				beige: {
+					50: '#FAF8F3',
+					100: '#F5F1E8',
+					200: '#EBE3D1',
+					300: '#D4B896',
+					400: '#C4A676',
+					500: '#B39456'
 				}
 			},
 			borderRadius: {
@@ -68,27 +77,31 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
-				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'fade-in': 'fadeIn 0.6s ease-out',
+				'slide-up': 'slideUp 0.6s ease-out',
+				'hover-lift': 'hoverLift 0.2s ease-out',
+			},
+			keyframes: {
+				fadeIn: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				slideUp: {
+					'0%': { opacity: '0', transform: 'translateY(40px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				hoverLift: {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(-2px)' }
+				}
+			},
+			boxShadow: {
+				'zen': '0 2px 8px rgba(0,0,0,0.04)',
+				'zen-lg': '0 4px 16px rgba(0,0,0,0.06)',
 			}
 		}
 	},
