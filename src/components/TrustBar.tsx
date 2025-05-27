@@ -57,7 +57,7 @@ const TrustBar = () => {
       flag: (
         <svg width="40" height="24" viewBox="0 0 40 24" fill="none" className="transition-colors duration-300 group-hover:stroke-accent group-hover:text-accent">
           <rect x="0.5" y="0.5" width="39" height="23" rx="4" stroke="#6B7280" strokeWidth="1" fill="#F9FAFB"/>
-          <text x="20" y="16" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500" fill="#6B7280">INTL</text>
+          <text x="20" y="16" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="10" fontWeight="500" fill="#6B7280">INTL</text>
         </svg>
       ),
       name: 'International',
@@ -70,7 +70,7 @@ const TrustBar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-muted-foreground mb-8 text-lg">
-            Certified expertise across 25+ global regulations and frameworks
+            Certified expertise across 70+ regulations in Americas, Europe, Asia-Pacific, Middle East & Africa
           </p>
         </div>
         

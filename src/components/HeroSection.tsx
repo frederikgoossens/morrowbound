@@ -1,11 +1,14 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Shield, Clock, Globe, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
-  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  return (
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
@@ -22,16 +25,16 @@ const HeroSection = () => {
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-8 mb-16 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <Clock size={16} className="text-accent" />
-              <span>48-hour turnaround</span>
-            </div>
-            <div className="flex items-center gap-2">
               <Globe size={16} className="text-accent" />
-              <span>Global compliance expertise</span>
+              <span>70+ Global Standards</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-accent" />
-              <span>150+ audits completed</span>
+              <Shield size={16} className="text-accent" />
+              <span>40+ Jurisdictions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-accent" />
+              <span>48-Hour Results</span>
             </div>
           </div>
 
@@ -60,6 +63,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
