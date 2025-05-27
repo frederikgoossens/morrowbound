@@ -1,84 +1,69 @@
 
 import React from 'react';
-import { ArrowRight, Quote } from 'lucide-react';
 
 const UseCasesSection = () => {
-  const useCases = [
+  const caseStudies = [
     {
-      title: 'Voice AI Startup achieves EU AI Act compliance',
-      description: 'Achieved EU AI Act compliance for their multilingual customer service bot in just 48 hours, enabling rapid European market expansion.',
-      category: 'AI Compliance',
-      outcome: '100% compliant in 48 hours'
+      client: 'Voice AI Startup',
+      achievement: 'Achieved EU AI Act compliance for their multilingual customer service bot in just 48 hours',
+      metric: '48 hours to compliance'
     },
     {
-      title: 'Global E-commerce Platform passes accessibility audit',
-      description: 'Passed WCAG 2.2 Level AA across 12 markets and improved conversion by 23% through enhanced accessibility features.',
-      category: 'Accessibility',
-      outcome: 'WCAG 2.2 AA + 23% conversion boost'
+      client: 'Global E-commerce Platform', 
+      achievement: 'Passed WCAG 2.2 Level AA across 12 markets and improved conversion by 23%',
+      metric: '23% conversion increase'
     },
     {
-      title: 'VR Training Platform certified across regions',
-      description: 'Certified for accessibility standards across US, EU, and APAC regions, enabling global enterprise deployment.',
-      category: 'Multi-jurisdictional',
-      outcome: 'Global compliance achieved'
+      client: 'VR Training Platform',
+      achievement: 'Certified for accessibility standards across US, EU, and APAC regions',
+      metric: '3 regions certified'
     }
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
             Trusted by Innovators
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See how forward-thinking companies have achieved compliance success 
-            with Parcivy's expert guidance and accelerated their market entry.
+            From startups to enterprises, we help forward-thinking companies 
+            navigate compliance with confidence.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {useCases.map((useCase, index) => (
+          {caseStudies.map((study, index) => (
             <div 
               key={index}
-              className="zen-card group animate-on-scroll"
+              className="zen-card animate-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start justify-between mb-4">
-                <span className="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                  {useCase.category}
-                </span>
-                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors" />
-              </div>
-              
               <h3 className="text-xl font-medium text-foreground mb-3">
-                {useCase.title}
+                {study.client}
               </h3>
-              
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                {useCase.description}
+                {study.achievement}
               </p>
-              
-              <div className="pt-4 border-t border-border/30">
-                <p className="text-sm font-medium text-accent">
-                  {useCase.outcome}
-                </p>
-              </div>
+              <p className="text-accent font-medium">
+                {study.metric}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* Testimonial Section */}
-        <div className="max-w-4xl mx-auto">
-          <div className="zen-card text-center animate-on-scroll">
-            <Quote className="w-8 h-8 text-accent mx-auto mb-6" />
-            <blockquote className="text-xl text-foreground mb-6 leading-relaxed">
-              "Parcivy transformed our compliance journey. What could have taken months of confusion 
-              was completed in days with crystal clarity."
-            </blockquote>
-            <footer className="text-muted-foreground">
-              <strong className="text-foreground">Sarah Chen</strong>, CTO at VoiceFirst AI
-            </footer>
+        {/* Testimonial */}
+        <div className="zen-card max-w-4xl mx-auto text-center">
+          <blockquote className="text-2xl font-light text-foreground mb-6 italic">
+            "Parcivy transformed our compliance journey. What could have taken months of confusion 
+            was completed in days with crystal clarity."
+          </blockquote>
+          <div className="flex items-center justify-center gap-4">
+            <div>
+              <p className="font-medium text-foreground">Sarah Chen</p>
+              <p className="text-muted-foreground">CTO, VoiceFirst AI</p>
+            </div>
           </div>
         </div>
       </div>

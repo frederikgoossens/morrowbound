@@ -31,9 +31,6 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/audit-process" className="text-muted-foreground hover:text-foreground transition-colors">
-              Audit Process
-            </Link>
             <Link to="/standards" className="text-muted-foreground hover:text-foreground transition-colors">
               Standards
             </Link>
@@ -64,13 +61,6 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border/50">
             <div className="flex flex-col space-y-4 pt-4">
-              <Link 
-                to="/audit-process" 
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Audit Process
-              </Link>
               <Link 
                 to="/standards" 
                 className="text-muted-foreground hover:text-foreground transition-colors"
