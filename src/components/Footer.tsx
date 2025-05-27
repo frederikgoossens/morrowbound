@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           
           <p className="text-muted-foreground text-sm">
-            Morrowbound © 2024 | Digital Compliance Simplified
+            © 2024 Morrowbound. Operated by Muggleman LTD (UK) & Merlaz Limited (HK). All rights reserved.
           </p>
         </div>
       </div>

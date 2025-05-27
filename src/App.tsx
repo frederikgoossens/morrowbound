@@ -9,6 +9,9 @@ import StartAudit from "./pages/StartAudit";
 import Verify from "./pages/Verify";
 import Team from "./pages/Team";
 import Standards from "./pages/Standards";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/standards" element={<Standards />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
