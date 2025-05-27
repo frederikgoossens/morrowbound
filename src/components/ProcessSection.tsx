@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Upload, Search, Shield } from 'lucide-react';
 
 const ProcessSection = () => {
   const steps = [
@@ -45,8 +44,13 @@ const ProcessSection = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative mb-8">
-                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg border border-blue-200">
-                  <span className="text-2xl font-bold text-accent">{step.number}</span>
+                <div className="w-20 h-20 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="38" fill="#D4B896" stroke="#C4A676" strokeWidth="2"/>
+                    <text x="40" y="50" textAnchor="middle" fontSize="28" fontWeight="600" fill="white">
+                      {step.number}
+                    </text>
+                  </svg>
                 </div>
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-accent/30 -z-10" />
