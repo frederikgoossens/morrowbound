@@ -11,14 +11,14 @@ const Team = () => {
     {
       name: 'Frederik Goossens, MBA',
       title: 'Founder & CEO',
-      bio: "Frederik brings 14+ years of experience leading AI and digital products across heavily regulated environments. His journey into compliance began in 2011 when navigating European e-commerce regulations at Noovigo. After leading AI governance initiatives at HSBC (1M+ users) and building EU AI Act-ready platforms at BNP Paribas, he recognized the critical need for agile compliance solutions. With deep expertise in conversational AI, Web3 privacy, and cross-border regulatory frameworks, Frederik founded Parcivy to make compliance as innovative as the technologies it serves.",
+      bio: "Frederik brings 14+ years of experience leading AI and digital products across heavily regulated environments. His journey into compliance began in 2011 when navigating European e-commerce regulations at Noovigo. After leading AI governance initiatives at HSBC (1M+ users) and building EU AI Act-ready platforms at BNP Paribas, he recognized the critical need for agile compliance solutions. With deep expertise in conversational AI, Web3 privacy, and cross-border regulatory frameworks, Frederik founded Morrowbound to make compliance as innovative as the technologies it serves.",
       linkedin: 'https://www.linkedin.com/in/frederikgoossens/',
       image: '/placeholder.svg' // You would replace this with actual image
     },
     {
       name: 'Aymeric Massiani, MBA',
       title: 'Partner & Head of Strategic Operations',
-      bio: "Aymeric brings a unique perspective to digital compliance through his 10+ years as a senior procurement consultant and turnaround specialist. Having led transformation projects for global enterprises across media, healthcare, finance, and technology sectors, he understands the critical intersection of operational excellence and regulatory requirements. His Cambridge MBA and expertise in risk management, process optimization, and international negotiations ensure Parcivy's audits deliver both compliance certainty and business value. As a member of the Turnaround Management Association, Aymeric helps organizations transform compliance from a burden into a competitive advantage.",
+      bio: "Aymeric brings a unique perspective to digital compliance through his 10+ years as a senior procurement consultant and turnaround specialist. Having led transformation projects for global enterprises across media, healthcare, finance, and technology sectors, he understands the critical intersection of operational excellence and regulatory requirements. His Cambridge MBA and expertise in risk management, process optimization, and international negotiations ensure Morrowbound's audits deliver both compliance certainty and business value. As a member of the Turnaround Management Association, Aymeric helps organizations transform compliance from a burden into a competitive advantage.",
       linkedin: 'https://www.linkedin.com/in/aymeric-massiani-mba-95bb4613/',
       image: '/placeholder.svg' // You would replace this with actual image
     }
@@ -35,7 +35,7 @@ const Team = () => {
             <h1 className="text-5xl sm:text-6xl font-light text-foreground mb-6 leading-tight">
               The Compliance Experts
               <br />
-              <span className="text-muted-foreground">Behind Parcivy</span>
+              <span className="text-muted-foreground">Behind Morrowbound</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Combining decades of digital innovation with deep regulatory expertise 

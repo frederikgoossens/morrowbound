@@ -12,7 +12,7 @@ const Verify = () => {
 
   const handleVerify = () => {
     // Mock verification logic
-    if (serialNumber === '2024-001' || serialNumber === 'PV-2024-WEB-001') {
+    if (serialNumber === '2024-001' || serialNumber === 'MB-2024-WEB-001') {
       setVerificationResult('valid');
     } else {
       setVerificationResult('invalid');
@@ -20,7 +20,7 @@ const Verify = () => {
   };
 
   const mockValidBadge = {
-    serialNumber: 'PV-2024-WEB-001',
+    serialNumber: 'MB-2024-WEB-001',
     companyName: 'TechCorp Solutions',
     platformName: 'E-commerce Platform',
     platformType: 'Web Application',
@@ -38,7 +38,7 @@ const Verify = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-              Verify Parcivy Badge
+              Verify Morrowbound Badge
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Enter a badge serial number to verify the compliance certification 
@@ -49,7 +49,7 @@ const Verify = () => {
           <div className="zen-card max-w-2xl mx-auto mb-12">
             <div className="flex gap-4 mb-6">
               <Input
-                placeholder="Enter badge serial (e.g., PV-2024-WEB-001)"
+                placeholder="Enter badge serial (e.g., MB-2024-WEB-001)"
                 value={serialNumber}
                 onChange={(e) => setSerialNumber(e.target.value)}
                 className="flex-1"
@@ -64,7 +64,7 @@ const Verify = () => {
             </div>
             
             <p className="text-sm text-muted-foreground">
-              Example serial numbers to try: <code>2024-001</code> or <code>PV-2024-WEB-001</code>
+              Example serial numbers to try: <code>2024-001</code> or <code>MB-2024-WEB-001</code>
             </p>
           </div>
 
@@ -145,7 +145,7 @@ const Verify = () => {
               </div>
               
               <p className="text-muted-foreground">
-                The serial number you entered does not match any valid Parcivy badges. 
+                The serial number you entered does not match any valid Morrowbound badges. 
                 Please check the serial number and try again. If you believe this is an error, 
                 please contact our support team.
               </p>

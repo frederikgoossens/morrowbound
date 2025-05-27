@@ -56,7 +56,7 @@ const UseCasesSection = () => {
         {/* Testimonial */}
         <div className="zen-card max-w-4xl mx-auto text-center">
           <blockquote className="text-2xl font-light text-foreground mb-6 italic">
-            "Parcivy transformed our compliance journey. What could have taken months of confusion 
+            "Morrowbound transformed our compliance journey. What could have taken months of confusion 
             was completed in days with crystal clarity."
           </blockquote>
           <div className="flex items-center justify-center gap-4">

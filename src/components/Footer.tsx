@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <Link to="/" className="text-2xl font-semibold text-foreground mb-8 inline-block">
-            Parcivy
+            Morrowbound
           </Link>
           
           <div className="flex flex-wrap justify-center gap-8 text-muted-foreground text-sm mb-8">
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           
           <p className="text-muted-foreground text-sm">
-            Parcivy © 2024 | Digital Compliance Simplified
+            Morrowbound © 2024 | Digital Compliance Simplified
           </p>
         </div>
       </div>
