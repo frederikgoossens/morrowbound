@@ -9,7 +9,7 @@ const CTASection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="zen-card text-center">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-            Ready to ensure compliance?
+            Ready to ensure compliance? Plans from £295
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Start your journey to comprehensive digital compliance with our expert team. 
@@ -53,6 +53,8 @@ const CTASection = () => {
           >
             <Link to="/start-audit">Start Your Audit</Link>
           </Button>
+          
+          <p className="text-muted-foreground mt-4">Transparent pricing from £295 to Enterprise</p>
         </div>
       </div>
     </section>

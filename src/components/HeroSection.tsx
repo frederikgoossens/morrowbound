@@ -1,11 +1,14 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Shield, Clock, Globe, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
-  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  return (
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
@@ -54,9 +57,13 @@ const HeroSection = () => {
             <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-6 text-lg">
               <Link to="/start-audit">Start Compliance Audit</Link>
             </Button>
+            
+            <p className="text-sm text-muted-foreground mt-3">Starting at £295 for small businesses</p>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
