@@ -5,19 +5,19 @@ import { Upload, Search, Shield } from 'lucide-react';
 const ProcessSection = () => {
   const steps = [
     {
-      icon: Upload,
+      number: 1,
       title: 'Submit & Assess',
       subtitle: '24h initial review',
       description: 'Quick 24-hour initial review of your digital platform against key compliance indicators and regulatory requirements.'
     },
     {
-      icon: Search,
+      number: 2,
       title: 'Comprehensive Audit',
       subtitle: 'detailed testing',
       description: 'In-depth testing against all relevant standards, with detailed gap analysis and expert recommendations for remediation.'
     },
     {
-      icon: Shield,
+      number: 3,
       title: 'Receive Certification',
       subtitle: 'badge & ongoing support',
       description: 'Get your Morrowbound Verified Badge, comprehensive compliance report, and detailed remediation roadmap for ongoing success.'
@@ -37,19 +37,19 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12 relative">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="text-center group animate-on-scroll"
+              className="text-center group animate-on-scroll relative"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative mb-8">
-                <div className="w-20 h-20 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                  <step.icon className="w-8 h-8 text-accent" />
+                <div className="w-20 h-20 mx-auto bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-accent-foreground">{step.number}</span>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-border/50 -z-10" />
+                  <div className="hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-accent/30 -z-10" />
                 )}
               </div>
               
