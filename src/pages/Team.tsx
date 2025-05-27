@@ -13,6 +13,7 @@ const Team = () => {
       role: 'Partner & Managing Director',
       bio: "Frederik brings 15 years of experience leading AI and digital products across heavily regulated environments. His journey into compliance began in 2010 when navigating European e-commerce regulations at Noovigo. After leading AI governance initiatives at HSBC (1M+ users) and building EU AI Act-ready platforms at BNP Paribas, he recognized the critical need for agile compliance solutions. With deep expertise in conversational AI, Web3 privacy, and cross-border regulatory frameworks, Frederik founded Morrowbound to make compliance as innovative as the technologies it serves.",
       linkedin: 'https://www.linkedin.com/in/frederikgoossens/',
+      image: '/lovable-uploads/eda11954-91de-4089-b57b-bd36b2374cb0.png',
       initials: 'FG'
     },
     {
@@ -20,6 +21,7 @@ const Team = () => {
       role: 'Partner & Managing Director',
       bio: "Aymeric brings a unique perspective to digital compliance through decades of working as a senior procurement consultant and turnaround specialist. Having led transformation projects for global enterprises across media, healthcare, finance, and technology sectors, he understands the critical intersection of operational excellence and regulatory requirements. His Cambridge MBA and expertise in risk management, process optimization, and international negotiations ensure Morrowbound's audits deliver both compliance certainty and business value. As a member of the Turnaround Management Association, Aymeric helps organizations transform compliance from a burden into a competitive advantage.",
       linkedin: 'https://www.linkedin.com/in/aymeric-massiani-mba-95bb4613/',
+      image: '/lovable-uploads/dbe1c423-403d-4732-930c-f1722d90223f.png',
       initials: 'AM'
     }
   ];
@@ -55,9 +57,11 @@ const Team = () => {
                 >
                   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-semibold text-xl">
-                        {member.initials}
-                      </div>
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-48 h-48 lg:w-52 lg:h-52 rounded-full border-4 border-accent/30 object-cover shadow-zen hover:scale-102 transition-transform duration-300"
+                      />
                     </div>
                     
                     <div className="flex-1">
