@@ -100,7 +100,9 @@ const Cases = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-light text-foreground mb-6 leading-tight">
-              Our Expertise
+              Compliance Cases
+              <br />
+              <span className="text-muted-foreground">We Specialize In</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Specialized compliance solutions for every digital frontier
