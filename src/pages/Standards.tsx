@@ -46,12 +46,12 @@ const Standards = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-beige-50">
+    <div className="min-h-screen bg-blue-50">
       <Navigation />
       
       <main className="pt-32 pb-20">
         {/* Hero Section */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20 bg-blue-50">
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-light text-foreground mb-6 leading-tight">
               Compliance Standards
