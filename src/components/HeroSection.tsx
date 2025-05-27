@@ -1,14 +1,11 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Shield, Clock, Globe, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const HeroSection = () => {
-  return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
@@ -17,10 +14,7 @@ const HeroSection = () => {
             <span className="text-muted-foreground">Simplified</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive audit and certification for Web, Mobile, Voice AI, VR, 
-            and emerging technologies
-          </p>
+          <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">Comprehensive audit and certification for Web, Mobile, Voice, AI, Data, Accessibility, XR, and emerging technologies</p>
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-8 mb-16 text-sm text-muted-foreground">
@@ -63,8 +57,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
