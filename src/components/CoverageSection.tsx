@@ -7,32 +7,32 @@ const CoverageSection = () => {
     {
       icon: Globe,
       title: 'Web & Mobile Apps',
-      description: 'Comprehensive accessibility, privacy, and security audits for web applications and mobile platforms.'
+      description: 'Ensure WCAG compliance, responsive design standards, and cross-platform accessibility for optimal user experience.'
     },
     {
       icon: Mic,
       title: 'Voice AI Systems',
-      description: 'Specialized compliance testing for voice assistants, chatbots, and conversational AI platforms.'
+      description: 'Validate speech recognition, NLU transparency, and voice interface accessibility across diverse user populations.'
     },
     {
       icon: Headphones,
       title: 'VR/AR Experiences',
-      description: 'Immersive technology compliance including accessibility, safety, and data protection standards.'
+      description: 'Test immersive environments for motion safety, accessibility standards, and ethical design principles.'
     },
     {
       icon: Brain,
       title: 'AI & ML Models',
-      description: 'Ethical AI auditing, bias detection, and compliance with emerging AI regulation frameworks.'
+      description: 'Assess algorithmic fairness, explainability requirements, and EU AI Act compliance for responsible AI deployment.'
     },
     {
       icon: Settings,
       title: 'IoT Devices',
-      description: 'Connected device security, privacy compliance, and regulatory certification for IoT ecosystems.'
+      description: 'Verify data security protocols, privacy-by-design implementation, and cross-border data regulation compliance.'
     },
     {
       icon: Smartphone,
       title: 'Custom Platforms',
-      description: 'Tailored compliance solutions for unique technologies and emerging digital platforms.'
+      description: 'Tailored audits for unique digital experiences and emerging technologies with bespoke compliance frameworks.'
     }
   ];
 

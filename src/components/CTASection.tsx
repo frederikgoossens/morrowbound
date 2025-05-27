@@ -18,8 +18,8 @@ const CTASection = () => {
           companies that trust Parcivy for their certification needs.
         </p>
 
-        {/* Preview Form */}
-        <div className="zen-card text-left opacity-60 pointer-events-none mb-8">
+        {/* Preview Form with Overlay */}
+        <div className="relative zen-card text-left mb-8">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <Input placeholder="Company Name" disabled />
             <Input placeholder="Contact Email" disabled />
@@ -48,6 +48,18 @@ const CTASection = () => {
               </SelectTrigger>
             </Select>
           </div>
+          
+          {/* Overlay */}
+          <Link to="/start-audit" className="absolute inset-0 bg-card/50 backdrop-blur-sm rounded-xl flex items-center justify-center group hover:bg-card/60 transition-all duration-300">
+            <div className="text-center">
+              <p className="text-lg font-medium text-foreground mb-2 group-hover:text-accent transition-colors">
+                View Full Intake Form →
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Complete your compliance assessment
+              </p>
+            </div>
+          </Link>
         </div>
 
         <Button 

@@ -1,32 +1,26 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Quote } from 'lucide-react';
 
 const UseCasesSection = () => {
   const useCases = [
     {
       title: 'Voice AI Startup achieves EU AI Act compliance',
-      description: 'A conversational AI platform successfully navigated the complex EU AI Act requirements with our specialized audit framework.',
+      description: 'Achieved EU AI Act compliance for their multilingual customer service bot in just 48 hours, enabling rapid European market expansion.',
       category: 'AI Compliance',
-      outcome: '100% compliant in 6 weeks'
+      outcome: '100% compliant in 48 hours'
     },
     {
-      title: 'E-commerce platform passes accessibility audit',
-      description: 'Major retail platform achieved WCAG 2.2 AA compliance across web and mobile, improving accessibility for 2M+ users.',
+      title: 'Global E-commerce Platform passes accessibility audit',
+      description: 'Passed WCAG 2.2 Level AA across 12 markets and improved conversion by 23% through enhanced accessibility features.',
       category: 'Accessibility',
-      outcome: 'WCAG 2.2 AA certified'
+      outcome: 'WCAG 2.2 AA + 23% conversion boost'
     },
     {
-      title: 'VR training app certified across 5 jurisdictions',
-      description: 'Immersive corporate training platform met privacy and safety standards across US, EU, Canada, Australia, and Singapore.',
+      title: 'VR Training Platform certified across regions',
+      description: 'Certified for accessibility standards across US, EU, and APAC regions, enabling global enterprise deployment.',
       category: 'Multi-jurisdictional',
       outcome: 'Global compliance achieved'
-    },
-    {
-      title: 'Healthcare IoT device meets HIPAA standards',
-      description: 'Connected medical device achieved comprehensive HIPAA compliance with enhanced security and privacy controls.',
-      category: 'Healthcare',
-      outcome: 'HIPAA compliant deployment'
     }
   ];
 
@@ -39,11 +33,11 @@ const UseCasesSection = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             See how forward-thinking companies have achieved compliance success 
-            with Parcivy's expert guidance.
+            with Parcivy's expert guidance and accelerated their market entry.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {useCases.map((useCase, index) => (
             <div 
               key={index}
@@ -72,6 +66,20 @@ const UseCasesSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Testimonial Section */}
+        <div className="max-w-4xl mx-auto">
+          <div className="zen-card text-center animate-on-scroll">
+            <Quote className="w-8 h-8 text-accent mx-auto mb-6" />
+            <blockquote className="text-xl text-foreground mb-6 leading-relaxed">
+              "Parcivy transformed our compliance journey. What could have taken months of confusion 
+              was completed in days with crystal clarity."
+            </blockquote>
+            <footer className="text-muted-foreground">
+              <strong className="text-foreground">Sarah Chen</strong>, CTO at VoiceFirst AI
+            </footer>
+          </div>
         </div>
       </div>
     </section>

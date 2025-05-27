@@ -8,19 +8,19 @@ const ProcessSection = () => {
       icon: Upload,
       title: 'Submit & Assess',
       subtitle: '24h initial review',
-      description: 'Upload your platform details and receive an initial compliance assessment within 24 hours.'
+      description: 'Quick 24-hour initial review of your digital platform against key compliance indicators and regulatory requirements.'
     },
     {
       icon: Search,
       title: 'Comprehensive Audit',
       subtitle: 'detailed testing',
-      description: 'Our experts conduct thorough testing across all relevant standards and frameworks for your platform.'
+      description: 'In-depth testing against all relevant standards, with detailed gap analysis and expert recommendations for remediation.'
     },
     {
       icon: Shield,
-      title: 'Receive Parcivy Verified Badge',
-      subtitle: 'certification & ongoing support',
-      description: 'Get your compliance badge with detailed reporting and ongoing support for maintaining compliance.'
+      title: 'Receive Certification',
+      subtitle: 'badge & ongoing support',
+      description: 'Get your Parcivy Verified Badge, comprehensive compliance report, and detailed remediation roadmap for ongoing success.'
     }
   ];
 
@@ -33,7 +33,7 @@ const ProcessSection = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A streamlined process designed to get you certified quickly while ensuring 
-            thorough compliance coverage.
+            thorough compliance coverage and actionable insights.
           </p>
         </div>
 

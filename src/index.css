@@ -116,4 +116,8 @@
   .zen-card {
     @apply bg-card rounded-xl shadow-zen border border-border/50 p-8 transition-all duration-300 hover:shadow-zen-lg hover:-translate-y-0.5;
   }
+
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
 }
