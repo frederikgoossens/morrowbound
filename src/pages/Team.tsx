@@ -51,7 +51,7 @@ const Team = () => {
               {teamMembers.map((member, index) => (
                 <div 
                   key={index}
-                  className="bg-blue-100 rounded-xl shadow-zen border border-blue-200 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1 text-center lg:text-left"
+                  className="zen-card text-center lg:text-left"
                 >
                   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
                     <div className="flex-shrink-0">
