@@ -2,8 +2,6 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import ScrollingBanner from '@/components/ScrollingBanner';
-import TrustBar from '@/components/TrustBar';
 import CoverageSection from '@/components/CoverageSection';
 import StandardsSection from '@/components/StandardsSection';
 import GlobalProtectionSection from '@/components/GlobalProtectionSection';
@@ -17,8 +15,6 @@ const Index = () => {
     <div className="min-h-screen bg-beige-50">
       <Navigation />
       <HeroSection />
-      <ScrollingBanner />
-      <TrustBar />
       <CoverageSection />
       <StandardsSection />
       <GlobalProtectionSection />
