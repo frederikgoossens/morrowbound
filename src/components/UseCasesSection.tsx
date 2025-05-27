@@ -21,7 +21,7 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-blue-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
@@ -37,7 +37,7 @@ const UseCasesSection = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={index}
-              className="zen-card animate-on-scroll"
+              className="bg-white rounded-xl shadow-lg border border-blue-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-xl font-medium text-foreground mb-3">
@@ -54,7 +54,7 @@ const UseCasesSection = () => {
         </div>
 
         {/* Testimonial */}
-        <div className="zen-card max-w-4xl mx-auto text-center">
+        <div className="bg-white rounded-xl shadow-lg border border-blue-200 p-8 max-w-4xl mx-auto text-center">
           <blockquote className="text-2xl font-light text-foreground mb-6 italic">
             "Morrowbound transformed our compliance journey. What could have taken months of confusion 
             was completed in days with crystal clarity."

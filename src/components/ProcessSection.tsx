@@ -25,7 +25,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-blue-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
@@ -41,27 +41,29 @@ const ProcessSection = () => {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="text-center group animate-on-scroll relative"
+              className="text-center group relative"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative mb-8">
-                <div className="w-20 h-20 mx-auto bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-accent-foreground">{step.number}</span>
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg border border-blue-200">
+                  <span className="text-2xl font-bold text-accent">{step.number}</span>
                 </div>
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-accent/30 -z-10" />
                 )}
               </div>
               
-              <h3 className="text-2xl font-medium text-foreground mb-2">
-                {step.title}
-              </h3>
-              <p className="text-accent font-medium mb-4">
-                {step.subtitle}
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
+              <div className="bg-white rounded-xl shadow-lg border border-blue-200 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <h3 className="text-2xl font-medium text-foreground mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-accent font-medium mb-4">
+                  {step.subtitle}
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
