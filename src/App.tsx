@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import StartAudit from "./pages/StartAudit";
 import Verify from "./pages/Verify";
 import Team from "./pages/Team";
+import Cases from "./pages/Cases";
 import Standards from "./pages/Standards";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/start-audit" element={<StartAudit />} />
+          <Route path="/cases" element={<Cases />} />
           <Route path="/standards" element={<Standards />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/team" element={<Team />} />
