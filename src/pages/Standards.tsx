@@ -6,36 +6,81 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Standards = () => {
+  const RegionalBadge = ({ code }: { code: string }) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <rect x="1" y="1" width="30" height="30" rx="4" stroke="currentColor" strokeWidth="1.5" fill="#F9FAFB"/>
+      <text x="16" y="20" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500" fill="#6B7280">{code}</text>
+    </svg>
+  );
+
+  const ShieldIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </svg>
+  );
+
+  const AccessibilityIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="16" cy="4" r="1"/>
+      <path d="m18 19 1-7-6 2"/>
+      <path d="m5 8 3-3 5 3 6-2"/>
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+  );
+
+  const CircuitIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="4" y="4" width="6" height="6" rx="1"/>
+      <rect x="14" y="4" width="6" height="6" rx="1"/>
+      <rect x="14" y="14" width="6" height="6" rx="1"/>
+      <rect x="4" y="14" width="6" height="6" rx="1"/>
+      <line x1="10" y1="7" x2="14" y2="7"/>
+      <line x1="7" y1="10" x2="7" y2="14"/>
+      <line x1="17" y1="10" x2="17" y2="14"/>
+      <line x1="10" y1="17" x2="14" y2="17"/>
+    </svg>
+  );
+
+  const CertificateIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M8 21v-6m8 6v-6"/>
+      <path d="M12 15c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6Z"/>
+      <path d="m10 9 1.5 1.5L14 8"/>
+    </svg>
+  );
+
   const standardsCategories = [
     {
       title: 'Privacy & Data Protection',
+      icon: <ShieldIcon />,
       standards: [
         {
-          flag: '🇪🇺',
+          badge: <RegionalBadge code="EU" />,
           name: 'GDPR',
           fullName: 'General Data Protection Regulation',
           description: 'Comprehensive data protection law governing personal data processing in the EU'
         },
         {
-          flag: '🇺🇸',
+          badge: <RegionalBadge code="US" />,
           name: 'CCPA',
           fullName: 'California Consumer Privacy Act',
           description: 'California state law enhancing privacy rights for consumers'
         },
         {
-          flag: '🇭🇰',
+          badge: <RegionalBadge code="HK" />,
           name: 'PDPO',
           fullName: 'Personal Data (Privacy) Ordinance',
           description: 'Hong Kong\'s primary data protection legislation'
         },
         {
-          flag: '🇸🇬',
+          badge: <RegionalBadge code="SG" />,
           name: 'PDPA',
           fullName: 'Personal Data Protection Act',
           description: 'Singapore\'s comprehensive personal data protection framework'
         },
         {
-          flag: '🇬🇧',
+          badge: <RegionalBadge code="UK" />,
           name: 'UK GDPR',
           fullName: 'UK General Data Protection Regulation',
           description: 'Post-Brexit data protection law for the United Kingdom'
@@ -44,33 +89,34 @@ const Standards = () => {
     },
     {
       title: 'Accessibility Standards',
+      icon: <AccessibilityIcon />,
       standards: [
         {
-          flag: '🌏',
+          badge: <RegionalBadge code="INT" />,
           name: 'WCAG 2.2',
           fullName: 'Web Content Accessibility Guidelines',
           description: 'International standard for web accessibility and inclusive design'
         },
         {
-          flag: '🇺🇸',
+          badge: <RegionalBadge code="US" />,
           name: 'ADA',
           fullName: 'Americans with Disabilities Act',
           description: 'US federal law prohibiting discrimination based on disability'
         },
         {
-          flag: '🇺🇸',
+          badge: <RegionalBadge code="US" />,
           name: 'Section 508',
           fullName: 'US Federal Accessibility Standards',
           description: 'Federal law requiring accessible technology for government agencies'
         },
         {
-          flag: '🇪🇺',
+          badge: <RegionalBadge code="EU" />,
           name: 'EN 301 549',
           fullName: 'European Accessibility Standard',
           description: 'European standard for ICT accessibility requirements'
         },
         {
-          flag: '🇬🇧',
+          badge: <RegionalBadge code="UK" />,
           name: 'Equality Act',
           fullName: 'UK Equality Act 2010',
           description: 'UK legislation protecting against discrimination and promoting equality'
@@ -79,27 +125,28 @@ const Standards = () => {
     },
     {
       title: 'AI & Emerging Tech',
+      icon: <CircuitIcon />,
       standards: [
         {
-          flag: '🇪🇺',
+          badge: <RegionalBadge code="EU" />,
           name: 'EU AI Act',
           fullName: 'Artificial Intelligence Act',
           description: 'Comprehensive AI regulation framework for risk-based governance'
         },
         {
-          flag: '🌏',
+          badge: <RegionalBadge code="INT" />,
           name: 'ISO/IEC 23053',
           fullName: 'Framework for AI using ML',
           description: 'International framework for trustworthy AI and machine learning'
         },
         {
-          flag: '🇸🇬',
+          badge: <RegionalBadge code="SG" />,
           name: 'Singapore Model AI',
           fullName: 'Model AI Governance Framework',
           description: 'Voluntary framework for responsible AI deployment in organizations'
         },
         {
-          flag: '🌏',
+          badge: <RegionalBadge code="INT" />,
           name: 'IEEE Standards',
           fullName: 'Ethical AI Standards',
           description: 'Technical standards for ethical design in autonomous systems'
@@ -108,27 +155,28 @@ const Standards = () => {
     },
     {
       title: 'Industry Standards',
+      icon: <CertificateIcon />,
       standards: [
         {
-          flag: '🌏',
+          badge: <RegionalBadge code="INT" />,
           name: 'ISO 27001',
           fullName: 'Information Security Management',
           description: 'International standard for information security management systems'
         },
         {
-          flag: '🌏',
+          badge: <RegionalBadge code="INT" />,
           name: 'SOC 2',
           fullName: 'Service Organization Control',
           description: 'Auditing standard for service organizations\' security controls'
         },
         {
-          flag: '🌏',
+          badge: <RegionalBadge code="INT" />,
           name: 'Privacy by Design',
           fullName: 'Privacy Framework',
           description: 'Proactive approach to embedding privacy into system design'
         },
         {
-          flag: '🇺🇸',
+          badge: <RegionalBadge code="US" />,
           name: 'NIST Framework',
           fullName: 'Cybersecurity Framework',
           description: 'US framework for improving critical infrastructure cybersecurity'
@@ -162,18 +210,27 @@ const Standards = () => {
           <div className="max-w-7xl mx-auto space-y-16">
             {standardsCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="space-y-8">
-                <h2 className="text-3xl font-light text-foreground text-center mb-12">
-                  {category.title}
-                </h2>
+                <div className="flex items-center justify-center mb-12">
+                  <div className="flex items-center gap-3">
+                    <div className="text-gray-600 hover:text-accent transition-colors duration-300">
+                      {category.icon}
+                    </div>
+                    <h2 className="text-3xl font-light text-foreground">
+                      {category.title}
+                    </h2>
+                  </div>
+                </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.standards.map((standard, standardIndex) => (
                     <div 
                       key={standardIndex}
-                      className="bg-card rounded-xl shadow-zen border border-border/50 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1"
+                      className="bg-card rounded-xl shadow-zen border border-border/50 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1 group"
                     >
                       <div className="flex items-center mb-4">
-                        <span className="text-2xl mr-3">{standard.flag}</span>
+                        <div className="mr-3 text-gray-600 group-hover:text-accent transition-colors duration-300">
+                          {standard.badge}
+                        </div>
                         <div>
                           <h3 className="font-semibold text-foreground text-lg">{standard.name}</h3>
                           <p className="text-sm text-muted-foreground">{standard.fullName}</p>
