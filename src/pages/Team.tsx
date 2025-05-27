@@ -10,17 +10,17 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Frederik Goossens, MBA',
-      title: 'Founder & CEO',
-      bio: "Frederik brings 14+ years of experience leading AI and digital products across heavily regulated environments. His journey into compliance began in 2011 when navigating European e-commerce regulations at Noovigo. After leading AI governance initiatives at HSBC (1M+ users) and building EU AI Act-ready platforms at BNP Paribas, he recognized the critical need for agile compliance solutions. With deep expertise in conversational AI, Web3 privacy, and cross-border regulatory frameworks, Frederik founded Morrowbound to make compliance as innovative as the technologies it serves.",
+      role: 'Partner & Managing Director',
+      bio: "Frederik brings 15 years of experience leading AI and digital products across heavily regulated environments. His journey into compliance began in 2010 when navigating European e-commerce regulations at Noovigo. After leading AI governance initiatives at HSBC (1M+ users) and building EU AI Act-ready platforms at BNP Paribas, he recognized the critical need for agile compliance solutions. With deep expertise in conversational AI, Web3 privacy, and cross-border regulatory frameworks, Frederik founded Morrowbound to make compliance as innovative as the technologies it serves.",
       linkedin: 'https://www.linkedin.com/in/frederikgoossens/',
-      image: '/placeholder.svg'
+      initials: 'FG'
     },
     {
       name: 'Aymeric Massiani, MBA',
-      title: 'Partner & Head of Strategic Operations',
-      bio: "Aymeric brings a unique perspective to digital compliance through his 10+ years as a senior procurement consultant and turnaround specialist. Having led transformation projects for global enterprises across media, healthcare, finance, and technology sectors, he understands the critical intersection of operational excellence and regulatory requirements. His Cambridge MBA and expertise in risk management, process optimization, and international negotiations ensure Morrowbound's audits deliver both compliance certainty and business value. As a member of the Turnaround Management Association, Aymeric helps organizations transform compliance from a burden into a competitive advantage.",
+      role: 'Partner & Managing Director',
+      bio: "Aymeric brings a unique perspective to digital compliance through decades of working as a senior procurement consultant and turnaround specialist. Having led transformation projects for global enterprises across media, healthcare, finance, and technology sectors, he understands the critical intersection of operational excellence and regulatory requirements. His Cambridge MBA and expertise in risk management, process optimization, and international negotiations ensure Morrowbound's audits deliver both compliance certainty and business value. As a member of the Turnaround Management Association, Aymeric helps organizations transform compliance from a burden into a competitive advantage.",
       linkedin: 'https://www.linkedin.com/in/aymeric-massiani-mba-95bb4613/',
-      image: '/placeholder.svg'
+      initials: 'AM'
     }
   ];
 
@@ -46,29 +46,26 @@ const Team = () => {
 
         {/* Team Members */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8">
               {teamMembers.map((member, index) => (
                 <div 
                   key={index}
-                  className="bg-blue-100 rounded-xl shadow-zen border border-blue-200 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1 text-center lg:text-left animate-on-scroll"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="bg-blue-100 rounded-xl shadow-zen border border-blue-200 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1 text-center lg:text-left"
                 >
                   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
                     <div className="flex-shrink-0">
-                      <img 
-                        src={member.image}
-                        alt={member.name}
-                        className="w-32 h-32 rounded-full border-4 border-accent/20 object-cover hover:scale-102 transition-transform duration-300 shadow-zen"
-                      />
+                      <div className="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-semibold text-xl">
+                        {member.initials}
+                      </div>
                     </div>
                     
                     <div className="flex-1">
                       <h3 className="text-2xl font-medium text-foreground mb-2">
                         {member.name}
                       </h3>
-                      <p className="text-accent font-medium mb-4">
-                        {member.title}
+                      <p className="text-accent font-medium mb-4 text-lg">
+                        {member.role}
                       </p>
                       <p className="text-muted-foreground leading-relaxed mb-6">
                         {member.bio}
