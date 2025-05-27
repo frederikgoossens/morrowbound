@@ -9,7 +9,7 @@ const Standards = () => {
   const RegionalBadge = ({ code }: { code: string }) => (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
       <rect x="1" y="1" width="30" height="30" rx="4" stroke="currentColor" strokeWidth="1.5" fill="#F9FAFB"/>
-      <text x="16" y="20" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500" fill="#6B7280">{code}</text>
+      <text x="16" y="20" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="10" fontWeight="500" fill="#6B7280">{code}</text>
     </svg>
   );
 
@@ -52,7 +52,43 @@ const Standards = () => {
 
   const standardsCategories = [
     {
-      title: 'Privacy & Data Protection',
+      title: 'Privacy & Data Protection - Americas',
+      icon: <ShieldIcon />,
+      standards: [
+        {
+          badge: <RegionalBadge code="US" />,
+          name: 'CCPA',
+          fullName: 'California Consumer Privacy Act',
+          description: 'California state law enhancing privacy rights for consumers'
+        },
+        {
+          badge: <RegionalBadge code="US" />,
+          name: 'COPPA',
+          fullName: 'Children\'s Online Privacy Protection Act',
+          description: 'US federal law protecting children\'s online privacy'
+        },
+        {
+          badge: <RegionalBadge code="CA" />,
+          name: 'PIPEDA',
+          fullName: 'Personal Information Protection and Electronic Documents Act',
+          description: 'Canadian federal privacy legislation for private sector'
+        },
+        {
+          badge: <RegionalBadge code="CA" />,
+          name: 'Bill 64',
+          fullName: 'Quebec Private Sector Privacy Reform',
+          description: 'Quebec\'s comprehensive privacy law, among Canada\'s strictest'
+        },
+        {
+          badge: <RegionalBadge code="CA" />,
+          name: 'AIDA',
+          fullName: 'Artificial Intelligence and Data Act',
+          description: 'Canada\'s proposed federal AI governance framework'
+        }
+      ]
+    },
+    {
+      title: 'Privacy & Data Protection - Europe',
       icon: <ShieldIcon />,
       standards: [
         {
@@ -62,16 +98,52 @@ const Standards = () => {
           description: 'Comprehensive data protection law governing personal data processing in the EU'
         },
         {
-          badge: <RegionalBadge code="US" />,
-          name: 'CCPA',
-          fullName: 'California Consumer Privacy Act',
-          description: 'California state law enhancing privacy rights for consumers'
+          badge: <RegionalBadge code="EU" />,
+          name: 'ePrivacy',
+          fullName: 'ePrivacy Regulation',
+          description: 'EU regulation on privacy in electronic communications'
         },
         {
-          badge: <RegionalBadge code="HK" />,
-          name: 'PDPO',
-          fullName: 'Personal Data (Privacy) Ordinance',
-          description: 'Hong Kong\'s primary data protection legislation'
+          badge: <RegionalBadge code="UK" />,
+          name: 'UK GDPR',
+          fullName: 'UK General Data Protection Regulation',
+          description: 'Post-Brexit data protection law for the United Kingdom'
+        },
+        {
+          badge: <RegionalBadge code="UK" />,
+          name: 'DPA 2018',
+          fullName: 'Data Protection Act 2018',
+          description: 'UK\'s implementation of GDPR and additional data protection provisions'
+        }
+      ]
+    },
+    {
+      title: 'Privacy & Data Protection - Asia Pacific',
+      icon: <ShieldIcon />,
+      standards: [
+        {
+          badge: <RegionalBadge code="CN" />,
+          name: 'PIPL',
+          fullName: 'Personal Information Protection Law',
+          description: 'China\'s comprehensive personal data protection legislation'
+        },
+        {
+          badge: <RegionalBadge code="CN" />,
+          name: 'CSL',
+          fullName: 'Cybersecurity Law',
+          description: 'China\'s foundational cybersecurity and data protection framework'
+        },
+        {
+          badge: <RegionalBadge code="JP" />,
+          name: 'APPI',
+          fullName: 'Act on Protection of Personal Information',
+          description: 'Japan\'s primary personal information protection legislation'
+        },
+        {
+          badge: <RegionalBadge code="KR" />,
+          name: 'PIPA',
+          fullName: 'Personal Information Protection Act',
+          description: 'South Korea\'s comprehensive personal data protection law'
         },
         {
           badge: <RegionalBadge code="SG" />,
@@ -80,10 +152,52 @@ const Standards = () => {
           description: 'Singapore\'s comprehensive personal data protection framework'
         },
         {
-          badge: <RegionalBadge code="UK" />,
-          name: 'UK GDPR',
-          fullName: 'UK General Data Protection Regulation',
-          description: 'Post-Brexit data protection law for the United Kingdom'
+          badge: <RegionalBadge code="AU" />,
+          name: 'Privacy Act',
+          fullName: 'Privacy Act 1988 (2022 Amendment)',
+          description: 'Australia\'s updated privacy legislation with enhanced penalties'
+        },
+        {
+          badge: <RegionalBadge code="NZ" />,
+          name: 'Privacy Act',
+          fullName: 'Privacy Act 2020',
+          description: 'New Zealand\'s modernized privacy protection framework'
+        },
+        {
+          badge: <RegionalBadge code="IN" />,
+          name: 'DPDP Act',
+          fullName: 'Digital Personal Data Protection Act 2023',
+          description: 'India\'s comprehensive digital data protection legislation'
+        }
+      ]
+    },
+    {
+      title: 'Privacy & Data Protection - Middle East',
+      icon: <ShieldIcon />,
+      standards: [
+        {
+          badge: <RegionalBadge code="UAE" />,
+          name: 'Federal DPL',
+          fullName: 'UAE Federal Data Protection Law',
+          description: 'United Arab Emirates comprehensive data protection framework'
+        },
+        {
+          badge: <RegionalBadge code="SA" />,
+          name: 'PDPL',
+          fullName: 'Personal Data Protection Law',
+          description: 'Saudi Arabia\'s personal data protection legislation'
+        },
+        {
+          badge: <RegionalBadge code="QA" />,
+          name: 'DPL',
+          fullName: 'Qatar Data Protection Law',
+          description: 'Qatar\'s data protection and privacy framework'
+        },
+        {
+          badge: <RegionalBadge code="EG" />,
+          name: 'DPL',
+          fullName: 'Egypt Data Protection Law',
+          description: 'Egypt\'s emerging data protection legislation'
         }
       ]
     },
@@ -134,22 +248,28 @@ const Standards = () => {
           description: 'Comprehensive AI regulation framework for risk-based governance'
         },
         {
+          badge: <RegionalBadge code="CN" />,
+          name: 'AI Provisions',
+          fullName: 'Algorithm Recommendation Management Provisions',
+          description: 'China\'s regulations governing AI and algorithmic systems'
+        },
+        {
+          badge: <RegionalBadge code="SG" />,
+          name: 'Model AI',
+          fullName: 'Model AI Governance Framework',
+          description: 'Singapore\'s voluntary framework for responsible AI deployment'
+        },
+        {
           badge: <RegionalBadge code="INT" />,
           name: 'ISO/IEC 23053',
           fullName: 'Framework for AI using ML',
           description: 'International framework for trustworthy AI and machine learning'
         },
         {
-          badge: <RegionalBadge code="SG" />,
-          name: 'Singapore Model AI',
-          fullName: 'Model AI Governance Framework',
-          description: 'Voluntary framework for responsible AI deployment in organizations'
-        },
-        {
-          badge: <RegionalBadge code="INT" />,
-          name: 'IEEE Standards',
-          fullName: 'Ethical AI Standards',
-          description: 'Technical standards for ethical design in autonomous systems'
+          badge: <RegionalBadge code="AU" />,
+          name: 'AI Ethics',
+          fullName: 'AI Ethics Framework',
+          description: 'Australia\'s principles for responsible AI development'
         }
       ]
     },
@@ -180,6 +300,12 @@ const Standards = () => {
           name: 'NIST Framework',
           fullName: 'Cybersecurity Framework',
           description: 'US framework for improving critical infrastructure cybersecurity'
+        },
+        {
+          badge: <RegionalBadge code="AU" />,
+          name: 'CDR',
+          fullName: 'Consumer Data Right',
+          description: 'Australia\'s open banking and data portability framework'
         }
       ]
     }
@@ -194,13 +320,13 @@ const Standards = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-light text-foreground mb-6 leading-tight">
-              Compliance Standards
+              Global Compliance Standards
               <br />
               <span className="text-muted-foreground">We Audit Against</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive coverage across 25+ global regulations and frameworks, 
-              ensuring your compliance spans all relevant jurisdictions.
+              Comprehensive coverage across 70+ regulations in 40+ jurisdictions worldwide, 
+              ensuring your compliance spans all relevant markets.
             </p>
           </div>
         </section>
@@ -253,18 +379,18 @@ const Standards = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="zen-card">
               <h2 className="text-3xl font-light text-foreground mb-4">
-                Ready to get certified?
+                Ready for global certification?
               </h2>
               <p className="text-muted-foreground mb-8">
                 Our expert team will guide you through compliance requirements 
-                across all relevant standards for your platform.
+                across all relevant standards for your platform and target markets.
               </p>
               <Button 
                 asChild
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-12 py-6 text-lg"
               >
-                <Link to="/start-audit">Start Your Audit</Link>
+                <Link to="/start-audit">Start Your Global Audit</Link>
               </Button>
             </div>
           </div>
