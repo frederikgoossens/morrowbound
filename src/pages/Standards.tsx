@@ -170,7 +170,7 @@ const Standards = () => {
                   {category.standards.map((standard, standardIndex) => (
                     <div 
                       key={standardIndex}
-                      className="zen-card animate-on-scroll"
+                      className="bg-blue-100 rounded-xl shadow-lg border border-blue-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll"
                       style={{ animationDelay: `${standardIndex * 0.1}s` }}
                     >
                       <div className="flex items-center mb-4">
