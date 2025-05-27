@@ -10,6 +10,7 @@ import Verify from "./pages/Verify";
 import Team from "./pages/Team";
 import Cases from "./pages/Cases";
 import Standards from "./pages/Standards";
+import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/start-audit" element={<StartAudit />} />
           <Route path="/cases" element={<Cases />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/standards" element={<Standards />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/team" element={<Team />} />

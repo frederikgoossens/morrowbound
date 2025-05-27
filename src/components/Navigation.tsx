@@ -34,6 +34,9 @@ const Navigation = () => {
             <Link to="/cases" className="text-muted-foreground hover:text-foreground transition-colors">
               Cases
             </Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </Link>
             <Link to="/standards" className="text-muted-foreground hover:text-foreground transition-colors">
               Standards
             </Link>
@@ -70,6 +73,13 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Cases
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Pricing
               </Link>
               <Link 
                 to="/standards" 
