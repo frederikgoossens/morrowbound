@@ -45,6 +45,8 @@
     --sidebar-accent-foreground: 0 0% 18%;
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 38 44% 72%;
+
+    --beige-50: 48 56% 96%;
   }
 
   .dark {
@@ -84,6 +86,8 @@
     --sidebar-accent-foreground: 48 56% 96%;
     --sidebar-border: 210 6% 21%;
     --sidebar-ring: 38 44% 72%;
+
+    --beige-50: 0 0% 18%;
   }
 }
 
@@ -119,5 +123,17 @@
 
   .hover\:scale-102:hover {
     transform: scale(1.02);
+  }
+
+  .bg-beige-50 {
+    background-color: hsl(var(--beige-50));
+  }
+
+  .shadow-zen {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .shadow-zen-lg {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 }
