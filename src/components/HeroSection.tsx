@@ -1,14 +1,11 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Shield, Clock, Globe, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const HeroSection = () => {
-  return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
@@ -34,17 +31,14 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle size={16} className="text-accent" />
-              <span>500+ audits completed</span>
+              <span>150+ audits completed</span>
             </div>
           </div>
 
           {/* Quick Start Form */}
           <div className="zen-card max-w-2xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Input
-                placeholder="Your Website/App URL"
-                className="flex-1 border-border/50 focus:border-accent"
-              />
+              <Input placeholder="Your Website/App URL" className="flex-1 border-border/50 focus:border-accent" />
               <Select>
                 <SelectTrigger className="sm:w-48 border-border/50 focus:border-accent">
                   <SelectValue placeholder="Select Platform" />
@@ -60,18 +54,12 @@ const HeroSection = () => {
               </Select>
             </div>
             
-            <Button 
-              asChild
-              size="lg" 
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-6 text-lg"
-            >
+            <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-6 text-lg">
               <Link to="/start-audit">Start Compliance Audit</Link>
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
