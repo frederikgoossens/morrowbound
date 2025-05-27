@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -5,42 +6,134 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Standards = () => {
-  const regions = [
+  const standardsCategories = [
     {
-      flag: '🇪🇺',
-      name: 'European Union',
-      standards: ['GDPR', 'AI Act', 'ePrivacy', 'Digital Services Act', 'EN 301 549'],
-      description: 'Comprehensive data protection and AI governance frameworks'
+      title: 'Privacy & Data Protection',
+      standards: [
+        {
+          flag: '🇪🇺',
+          name: 'GDPR',
+          fullName: 'General Data Protection Regulation',
+          description: 'Comprehensive data protection law governing personal data processing in the EU'
+        },
+        {
+          flag: '🇺🇸',
+          name: 'CCPA',
+          fullName: 'California Consumer Privacy Act',
+          description: 'California state law enhancing privacy rights for consumers'
+        },
+        {
+          flag: '🇭🇰',
+          name: 'PDPO',
+          fullName: 'Personal Data (Privacy) Ordinance',
+          description: 'Hong Kong\'s primary data protection legislation'
+        },
+        {
+          flag: '🇸🇬',
+          name: 'PDPA',
+          fullName: 'Personal Data Protection Act',
+          description: 'Singapore\'s comprehensive personal data protection framework'
+        },
+        {
+          flag: '🇬🇧',
+          name: 'UK GDPR',
+          fullName: 'UK General Data Protection Regulation',
+          description: 'Post-Brexit data protection law for the United Kingdom'
+        }
+      ]
     },
     {
-      flag: '🇺🇸',
-      name: 'United States',
-      standards: ['ADA', 'CCPA', 'Section 508', 'COPPA', 'State Privacy Laws'],
-      description: 'Federal and state-level accessibility and privacy requirements'
+      title: 'Accessibility Standards',
+      standards: [
+        {
+          flag: '🌏',
+          name: 'WCAG 2.2',
+          fullName: 'Web Content Accessibility Guidelines',
+          description: 'International standard for web accessibility and inclusive design'
+        },
+        {
+          flag: '🇺🇸',
+          name: 'ADA',
+          fullName: 'Americans with Disabilities Act',
+          description: 'US federal law prohibiting discrimination based on disability'
+        },
+        {
+          flag: '🇺🇸',
+          name: 'Section 508',
+          fullName: 'US Federal Accessibility Standards',
+          description: 'Federal law requiring accessible technology for government agencies'
+        },
+        {
+          flag: '🇪🇺',
+          name: 'EN 301 549',
+          fullName: 'European Accessibility Standard',
+          description: 'European standard for ICT accessibility requirements'
+        },
+        {
+          flag: '🇬🇧',
+          name: 'Equality Act',
+          fullName: 'UK Equality Act 2010',
+          description: 'UK legislation protecting against discrimination and promoting equality'
+        }
+      ]
     },
     {
-      flag: '🇬🇧',
-      name: 'United Kingdom',
-      standards: ['UK GDPR', 'DPA 2018', 'Equality Act', 'Online Safety Bill'],
-      description: 'Post-Brexit data protection and online safety regulations'
+      title: 'AI & Emerging Tech',
+      standards: [
+        {
+          flag: '🇪🇺',
+          name: 'EU AI Act',
+          fullName: 'Artificial Intelligence Act',
+          description: 'Comprehensive AI regulation framework for risk-based governance'
+        },
+        {
+          flag: '🌏',
+          name: 'ISO/IEC 23053',
+          fullName: 'Framework for AI using ML',
+          description: 'International framework for trustworthy AI and machine learning'
+        },
+        {
+          flag: '🇸🇬',
+          name: 'Singapore Model AI',
+          fullName: 'Model AI Governance Framework',
+          description: 'Voluntary framework for responsible AI deployment in organizations'
+        },
+        {
+          flag: '🌏',
+          name: 'IEEE Standards',
+          fullName: 'Ethical AI Standards',
+          description: 'Technical standards for ethical design in autonomous systems'
+        }
+      ]
     },
     {
-      flag: '🇭🇰',
-      name: 'Hong Kong',
-      standards: ['PDPO', 'Accessibility Guidelines'],
-      description: 'Personal data and accessibility standards for APAC markets'
-    },
-    {
-      flag: '🇸🇬',
-      name: 'Singapore',
-      standards: ['PDPA', 'IM8', 'AI Governance'],
-      description: 'Leading ASEAN privacy and AI governance frameworks'
-    },
-    {
-      flag: '🌏',
-      name: 'International',
-      standards: ['ISO 27001', 'WCAG 2.2', 'ISO/IEC 23053', 'Privacy by Design'],
-      description: 'Global standards for security, accessibility, and privacy'
+      title: 'Industry Standards',
+      standards: [
+        {
+          flag: '🌏',
+          name: 'ISO 27001',
+          fullName: 'Information Security Management',
+          description: 'International standard for information security management systems'
+        },
+        {
+          flag: '🌏',
+          name: 'SOC 2',
+          fullName: 'Service Organization Control',
+          description: 'Auditing standard for service organizations\' security controls'
+        },
+        {
+          flag: '🌏',
+          name: 'Privacy by Design',
+          fullName: 'Privacy Framework',
+          description: 'Proactive approach to embedding privacy into system design'
+        },
+        {
+          flag: '🇺🇸',
+          name: 'NIST Framework',
+          fullName: 'Cybersecurity Framework',
+          description: 'US framework for improving critical infrastructure cybersecurity'
+        }
+      ]
     }
   ];
 
@@ -64,37 +157,38 @@ const Standards = () => {
           </div>
         </section>
 
-        {/* Standards Grid */}
+        {/* Standards Categories */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regions.map((region, index) => (
-                <div 
-                  key={index}
-                  className="zen-card animate-on-scroll"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-4">{region.flag}</span>
-                    <div>
-                      <h3 className="text-xl font-medium text-foreground">{region.name}</h3>
-                      <p className="text-sm text-muted-foreground">{region.description}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    {region.standards.map((standard, stdIndex) => (
-                      <div 
-                        key={stdIndex}
-                        className="p-3 bg-accent/5 rounded-lg border border-accent/10 hover:bg-accent/10 transition-colors"
-                      >
-                        <span className="font-medium text-foreground">{standard}</span>
+          <div className="max-w-7xl mx-auto space-y-16">
+            {standardsCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="space-y-8">
+                <h2 className="text-3xl font-light text-foreground text-center mb-12">
+                  {category.title}
+                </h2>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.standards.map((standard, standardIndex) => (
+                    <div 
+                      key={standardIndex}
+                      className="zen-card animate-on-scroll"
+                      style={{ animationDelay: `${standardIndex * 0.1}s` }}
+                    >
+                      <div className="flex items-center mb-4">
+                        <span className="text-2xl mr-3">{standard.flag}</span>
+                        <div>
+                          <h3 className="font-semibold text-foreground text-lg">{standard.name}</h3>
+                          <p className="text-sm text-muted-foreground">{standard.fullName}</p>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                      
+                      <p className="text-muted-foreground leading-relaxed">
+                        {standard.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </section>
 
