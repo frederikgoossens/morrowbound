@@ -20,7 +20,7 @@ const ProcessSection = () => {
       icon: Shield,
       title: 'Receive Certification',
       subtitle: 'badge & ongoing support',
-      description: 'Get your Parcivy Verified Badge, comprehensive compliance report, and detailed remediation roadmap for ongoing success.'
+      description: 'Get your Morrowbound Verified Badge, comprehensive compliance report, and detailed remediation roadmap for ongoing success.'
     }
   ];
 
