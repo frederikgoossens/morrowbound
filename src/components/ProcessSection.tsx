@@ -5,21 +5,21 @@ const ProcessSection = () => {
   const steps = [
     {
       number: 1,
-      title: 'Submit & Assess',
+      title: 'Risk Assessment',
       subtitle: '24h initial review',
-      description: 'Quick 24-hour initial review of your digital platform against key compliance indicators and regulatory requirements.'
+      description: 'Categorize your AI system under the EU AI Act and identify all applicable GDPR obligations for your data processing activities.'
     },
     {
       number: 2,
-      title: 'Comprehensive Audit',
+      title: 'Gap Analysis',
       subtitle: 'detailed testing',
-      description: 'In-depth testing against all relevant standards, with detailed gap analysis and expert recommendations for remediation.'
+      description: 'Comprehensive testing against EU AI Act risk categories and GDPR requirements with expert recommendations for full compliance.'
     },
     {
       number: 3,
-      title: 'Receive Certification',
-      subtitle: 'badge & ongoing support',
-      description: 'Get your Morrowbound Verified Badge, comprehensive compliance report, and detailed remediation roadmap for ongoing success.'
+      title: 'Compliance Roadmap',
+      subtitle: 'certificate & plan',
+      description: 'Receive your EU compliance certificate, detailed compliance report, and step-by-step implementation roadmap.'
     }
   ];
 
@@ -28,11 +28,11 @@ const ProcessSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-            Your Path to Compliance
+            EU Compliance in 3 Steps
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A streamlined process designed to get you certified quickly while ensuring 
-            thorough compliance coverage and actionable insights.
+            A streamlined process designed to achieve EU AI Act and GDPR compliance 
+            efficiently while ensuring thorough coverage and actionable insights.
           </p>
         </div>
 

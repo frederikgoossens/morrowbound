@@ -10,11 +10,11 @@ const Cases = () => {
     {
       icon: (
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 5a2 2 0 0 0-2-2 7 7 0 0 0-7 7c0 5 3.5 7.5 6 9.5M12 5a2 2 0 0 1 2-2 7 7 0 0 1 7 7c0 5-3.5 7.5-6 9.5M12 5v14M9 11h6M9 15h6"/>
+          <path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287L12 3Z"/>
         </svg>
       ),
       title: 'AI',
-      description: 'Ensure your AI systems meet EU AI Act requirements, demonstrate explainability, and maintain ethical standards across all deployments.'
+      description: 'EU AI Act compliance for machine learning systems, ensuring proper risk categorization and transparency requirements.'
     },
     {
       icon: (
@@ -25,7 +25,7 @@ const Cases = () => {
         </svg>
       ),
       title: 'Web',
-      description: 'Comprehensive web accessibility audits covering WCAG 2.2, ADA compliance, and multi-jurisdictional privacy regulations.'
+      description: 'GDPR compliance for websites targeting EU users, including cookie consent, privacy notices, and data subject rights.'
     },
     {
       icon: (
@@ -35,7 +35,7 @@ const Cases = () => {
         </svg>
       ),
       title: 'Mobile',
-      description: 'Mobile app compliance for iOS and Android, including accessibility, data protection, and app store requirements.'
+      description: 'Privacy compliance for apps in EU app stores, ensuring GDPR compliance and proper data handling practices.'
     },
     {
       icon: (
@@ -46,37 +46,7 @@ const Cases = () => {
         </svg>
       ),
       title: 'Voice',
-      description: 'Voice interface and conversational AI compliance, ensuring accessibility for speech recognition and NLU transparency.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M8 3H7a2 2 0 0 0-2 2v1m0 4v8a2 2 0 0 0 2 2h1m8-17h1a2 2 0 0 1 2 2v1m0 4v8a2 2 0 0 1-2 2h-1m-6-13a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-2Z"/>
-        </svg>
-      ),
-      title: 'XR',
-      description: 'Virtual and augmented reality compliance covering motion safety, accessibility, and immersive content regulations.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287L12 3Z"/>
-          <path d="M5 3v4M19 17v4M3 5h4M17 19h4"/>
-        </svg>
-      ),
-      title: 'Emerging Technologies',
-      description: 'Stay ahead with compliance for IoT, blockchain, quantum computing, and other cutting-edge technologies.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="8" r="2"></circle>
-          <path d="M7 12.5L10 16l2-3 2 3 3-3.5"></path>
-        </svg>
-      ),
-      title: 'Accessibility',
-      description: 'Universal design compliance ensuring your digital products are usable by everyone, regardless of ability.'
+      description: 'EU AI Act compliance for voice assistants and NLP systems, ensuring transparency and human oversight requirements.'
     },
     {
       icon: (
@@ -87,7 +57,7 @@ const Cases = () => {
         </svg>
       ),
       title: 'Data',
-      description: 'Privacy-by-design implementation, cross-border data transfer compliance, and comprehensive data protection audits.'
+      description: 'GDPR compliance for data controllers and processors, including lawful basis assessment and cross-border transfer mechanisms.'
     }
   ];
 
@@ -100,12 +70,12 @@ const Cases = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-light text-foreground mb-6 leading-tight">
-              Compliance Cases
+              EU Compliance Cases
               <br />
               <span className="text-muted-foreground">We Specialize In</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Specialized compliance solutions for every digital frontier
+              Expert EU AI Act and GDPR compliance solutions for digital innovation
             </p>
           </div>
         </section>
@@ -113,7 +83,7 @@ const Cases = () => {
         {/* Expertise Areas Grid */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {expertiseAreas.map((area, index) => (
                 <div 
                   key={index}
@@ -145,14 +115,14 @@ const Cases = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="zen-card">
               <h2 className="text-3xl font-light text-foreground mb-4">
-                Every case is unique. Let's discuss your specific compliance needs.
+                Every case is unique. Let's discuss your specific EU compliance needs.
               </h2>
               <Button 
                 asChild
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-12 py-6 text-lg"
               >
-                <Link to="/start-audit">Start Your Custom Audit</Link>
+                <Link to="/start-audit">Start Your EU Compliance Audit</Link>
               </Button>
             </div>
           </div>

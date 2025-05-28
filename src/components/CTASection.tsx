@@ -9,10 +9,10 @@ const CTASection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="zen-card text-center">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-            Ready to ensure compliance? Plans from £295
+            Ready for EU compliance? Plans from €350
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Start your journey to comprehensive digital compliance with our expert team. 
+            Start your journey to comprehensive EU AI Act and GDPR compliance with our expert team. 
             Get certified, stay compliant, and build user trust.
           </p>
           
@@ -21,7 +21,7 @@ const CTASection = () => {
             <div className="absolute inset-0 bg-card/50 rounded-xl flex items-center justify-center">
               <div className="text-center">
                 <p className="text-lg font-medium text-foreground mb-2">
-                  View Full Intake Form →
+                  View Full EU Compliance Assessment →
                 </p>
                 <p className="text-muted-foreground">
                   Complete assessment in 5 minutes
@@ -51,10 +51,10 @@ const CTASection = () => {
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-12 py-6 text-lg"
           >
-            <Link to="/start-audit">Start Your Audit</Link>
+            <Link to="/start-audit">Start Your EU Compliance Audit</Link>
           </Button>
           
-          <p className="text-muted-foreground mt-4">Transparent pricing from £295 to Enterprise</p>
+          <p className="text-muted-foreground mt-4">Transparent pricing from €350 to Enterprise</p>
         </div>
       </div>
     </section>

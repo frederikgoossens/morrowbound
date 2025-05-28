@@ -11,6 +11,10 @@ const Footer = () => {
             Morrowbound
           </Link>
           
+          <p className="text-muted-foreground text-sm mb-8">
+            EU AI Act & GDPR Compliance Experts • Serving EU & UK markets
+          </p>
+          
           <div className="flex flex-wrap justify-center gap-8 text-muted-foreground text-sm mb-8">
             <Link to="/privacy" className="hover:text-foreground transition-colors">
               Privacy

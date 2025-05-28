@@ -12,14 +12,14 @@ const Pricing = () => {
   const pricingTiers = [
     {
       name: "STARTER",
-      price: "Starting from £295",
-      description: "Perfect for small websites and basic compliance needs",
+      price: "Starting from €350",
+      description: "GDPR basics for small websites and simple data processing",
       popular: false,
       features: [
         "Small websites (up to 25 pages)",
-        "Single platform",
-        "1-2 compliance standards",
-        "Basic accessibility check",
+        "Basic GDPR assessment",
+        "Cookie consent review",
+        "Privacy notice audit",
         "72-hour delivery",
         "Automated scanning",
         "Compliance report",
@@ -31,19 +31,19 @@ const Pricing = () => {
     },
     {
       name: "PROFESSIONAL",
-      price: "Starting from £750",
-      description: "Perfect for growing businesses with multiple platforms",
+      price: "Starting from €950",
+      description: "GDPR + Basic AI Act assessment for growing businesses",
       popular: true,
       features: [
         "Growing businesses",
-        "Multiple platforms",
-        "3-5 compliance standards",
-        "Cross-border operations",
+        "GDPR + EU AI Act basics",
+        "Data processing assessment",
+        "Basic AI risk categorization",
         "48-hour delivery",
         "Everything in Starter",
         "Manual expert review",
         "Priority roadmap",
-        "Compliance badge",
+        "EU compliance badge",
         "60-day support"
       ],
       buttonText: "Most Popular",
@@ -51,18 +51,18 @@ const Pricing = () => {
     },
     {
       name: "ENTERPRISE",
-      price: "Custom pricing",
-      description: "Perfect for large platforms with complex requirements",
+      price: "Starting from €2,500",
+      description: "Full EU AI Act compliance for high-risk systems",
       popular: false,
       features: [
-        "Large platforms",
-        "Multiple jurisdictions",
-        "10+ compliance standards",
-        "AI/Voice/VR systems",
+        "High-risk AI systems",
+        "Complete EU AI Act compliance",
+        "Full GDPR assessment",
+        "Cross-border data transfers",
         "24-hour delivery",
         "Everything in Professional",
         "Dedicated expert team",
-        "White-label reports",
+        "Technical documentation",
         "Quarterly reviews",
         "Ongoing support"
       ],
@@ -79,10 +79,10 @@ const Pricing = () => {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-medium text-foreground mb-6">
-            Transparent Pricing
+            EU Compliance Pricing
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Right-sized compliance audits for every business
+            Right-sized EU AI Act and GDPR audits for every business
           </p>
         </div>
       </section>
@@ -155,20 +155,20 @@ const Pricing = () => {
                 Need something specific?
               </CardTitle>
               <CardDescription className="text-lg text-muted-foreground mb-6">
-                Every business is unique. Our pricing scales based on:
+                Every EU compliance case is unique. Our pricing scales based on:
               </CardDescription>
             </CardHeader>
             
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="text-sm font-medium text-foreground">Platform complexity</div>
+                  <div className="text-sm font-medium text-foreground">AI risk category</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm font-medium text-foreground">Number of regulations</div>
+                  <div className="text-sm font-medium text-foreground">Data processing scope</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm font-medium text-foreground">Geographic coverage</div>
+                  <div className="text-sm font-medium text-foreground">Cross-border transfers</div>
                 </div>
                 <div className="text-center">
                   <div className="text-sm font-medium text-foreground">Audit frequency</div>
