@@ -56,7 +56,7 @@ const HeroSection = () => {
               <Link to="/start-audit">Start EU Compliance Audit</Link>
             </Button>
             
-            <p className="text-sm text-muted-foreground mt-3">Starting at €350 for GDPR basics</p>
+            <p className="text-sm text-muted-foreground mt-3">GDPR audits from £4,000 • AI Act compliance from £15,000</p>
           </div>
         </div>
       </div>

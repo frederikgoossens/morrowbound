@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -38,8 +37,11 @@ const StartAudit = () => {
             <h1 className="text-4xl font-light text-foreground mb-4">
               Start Your Compliance Audit
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-2">
               Step {currentStep} of {totalSteps}
+            </p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Our audits range from £4,000 (GDPR only) to £75,000 (Enterprise AI systems)
             </p>
             <Progress value={progressPercentage} className="mt-4" />
           </div>
@@ -239,10 +241,9 @@ const StartAudit = () => {
                       <SelectValue placeholder="Estimated budget for this audit" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="startup">$5,000 - $15,000</SelectItem>
-                      <SelectItem value="small">$15,000 - $35,000</SelectItem>
-                      <SelectItem value="medium">$35,000 - $75,000</SelectItem>
-                      <SelectItem value="large">$75,000+</SelectItem>
+                      <SelectItem value="gdpr">£4,000 - GDPR Only</SelectItem>
+                      <SelectItem value="professional">£15,000 - Professional (AI Act + GDPR)</SelectItem>
+                      <SelectItem value="enterprise">£75,000 - Enterprise (High-risk AI)</SelectItem>
                       <SelectItem value="discuss">Prefer to discuss</SelectItem>
                     </SelectContent>
                   </Select>

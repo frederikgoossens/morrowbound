@@ -9,7 +9,7 @@ const CTASection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="zen-card text-center">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-            Ready for EU compliance? Plans from €350
+            Ready for EU compliance? Plans from £4,000
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Start your journey to comprehensive EU AI Act and GDPR compliance with our expert team. 
@@ -54,7 +54,7 @@ const CTASection = () => {
             <Link to="/start-audit">Start Your EU Compliance Audit</Link>
           </Button>
           
-          <p className="text-muted-foreground mt-4">Transparent pricing from €350 to Enterprise</p>
+          <p className="text-muted-foreground mt-4">Professional audits from £4,000 to £75,000</p>
         </div>
       </div>
     </section>
