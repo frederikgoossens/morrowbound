@@ -28,7 +28,7 @@ const ProcessSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-            EU Compliance in 3 Steps
+            Your Path to EU Compliance
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A streamlined process designed to achieve EU AI Act and GDPR compliance 

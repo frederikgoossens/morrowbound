@@ -12,7 +12,7 @@ const Footer = () => {
           </Link>
           
           <p className="text-muted-foreground text-sm mb-8">
-            EU AI Act & GDPR Compliance Experts • Serving EU & UK markets
+            EU AI Act & GDPR Compliance Specialists • Serving EU markets
           </p>
           
           <div className="flex flex-wrap justify-center gap-8 text-muted-foreground text-sm mb-8">

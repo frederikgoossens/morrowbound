@@ -6,17 +6,17 @@ const UseCasesSection = () => {
     {
       client: 'Voice AI Startup',
       achievement: 'Achieved EU AI Act compliance for their multilingual customer service bot in just 48 hours',
-      metric: '48 hours to compliance'
+      metric: '48 hours to EU compliance'
     },
     {
-      client: 'Global E-commerce Platform', 
-      achievement: 'Passed WCAG 2.2 Level AA across 12 markets and improved conversion by 23%',
-      metric: '23% conversion increase'
+      client: 'E-commerce Platform', 
+      achievement: 'Passed GDPR audit and implemented data subject rights across their EU operations',
+      metric: 'Full GDPR compliance'
     },
     {
-      client: 'VR Training Platform',
-      achievement: 'Certified for accessibility standards across US, EU, and APAC regions',
-      metric: '3 regions certified'
+      client: 'Healthcare AI Company',
+      achievement: 'Certified for EU AI Act high-risk category compliance for medical diagnostic systems',
+      metric: 'High-risk AI certified'
     }
   ];
 
@@ -25,11 +25,11 @@ const UseCasesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light text-foreground mb-6">
-            Trusted by Innovators
+            Trusted by EU Innovators
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             From startups to enterprises, we help forward-thinking companies 
-            navigate compliance with confidence.
+            navigate EU AI Act and GDPR compliance with confidence.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ const UseCasesSection = () => {
         {/* Testimonial */}
         <div className="bg-white rounded-xl shadow-lg border border-blue-200 p-8 max-w-4xl mx-auto text-center">
           <blockquote className="text-2xl font-light text-foreground mb-6 italic">
-            "Morrowbound transformed our compliance journey. What could have taken months of confusion 
+            "Morrowbound transformed our EU compliance journey. What could have taken months of confusion 
             was completed in days with crystal clarity."
           </blockquote>
           <div className="flex items-center justify-center gap-4">

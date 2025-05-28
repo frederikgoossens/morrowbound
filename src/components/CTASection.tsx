@@ -13,7 +13,7 @@ const CTASection = () => {
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Start your journey to comprehensive EU AI Act and GDPR compliance with our expert team. 
-            Get certified, stay compliant, and build user trust.
+            Specializing exclusively in EU AI Act and GDPR requirements.
           </p>
           
           {/* Form Preview */}

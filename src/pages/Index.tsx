@@ -4,7 +4,6 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import CoverageSection from '@/components/CoverageSection';
 import StandardsSection from '@/components/StandardsSection';
-import GlobalProtectionSection from '@/components/GlobalProtectionSection';
 import ProcessSection from '@/components/ProcessSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import CTASection from '@/components/CTASection';
@@ -17,7 +16,6 @@ const Index = () => {
       <HeroSection />
       <CoverageSection />
       <StandardsSection />
-      <GlobalProtectionSection />
       <ProcessSection />
       <UseCasesSection />
       <CTASection />
