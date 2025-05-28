@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const CoverageSection = () => {
@@ -27,7 +26,7 @@ const CoverageSection = () => {
           </svg>
         </div>
       ),
-      title: 'Voice & AI Systems',
+      title: 'Voice & Chat Systems',
       description: 'Validate speech recognition, NLU transparency, and voice interface accessibility across diverse user populations.'
     },
     {
