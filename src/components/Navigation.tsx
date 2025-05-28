@@ -40,9 +40,6 @@ const Navigation = () => {
             <Link to="/standards" className="text-muted-foreground hover:text-foreground transition-colors">
               Standards
             </Link>
-            <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors">
-              Team
-            </Link>
             <Link to="/verify" className="text-muted-foreground hover:text-foreground transition-colors">
               Verify Badge
             </Link>
@@ -87,13 +84,6 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Standards
-              </Link>
-              <Link 
-                to="/team" 
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Team
               </Link>
               <Link 
                 to="/verify" 
