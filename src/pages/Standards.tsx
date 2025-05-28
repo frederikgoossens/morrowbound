@@ -4,28 +4,18 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Standards = () => {
-  const RegionalBadge = ({ code }: { code: string }) => (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect x="1" y="1" width="30" height="30" rx="4" stroke="currentColor" strokeWidth="1.5" fill="#F9FAFB"/>
-      <text x="16" y="20" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="10" fontWeight="500" fill="#6B7280">{code}</text>
-    </svg>
-  );
-
   const ShieldIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       <path d="M9 12l2 2 4-4"/>
-    </svg>
-  );
-
-  const AccessibilityIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <circle cx="16" cy="4" r="1"/>
-      <path d="m18 19 1-7-6 2"/>
-      <path d="m5 8 3-3 5 3 6-2"/>
-      <circle cx="12" cy="12" r="10"/>
     </svg>
   );
 
@@ -42,274 +32,12 @@ const Standards = () => {
     </svg>
   );
 
-  const CertificateIcon = () => (
+  const LinkIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M8 21v-6m8 6v-6"/>
-      <path d="M12 15c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6Z"/>
-      <path d="m10 9 1.5 1.5L14 8"/>
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
     </svg>
   );
-
-  const standardsCategories = [
-    {
-      title: 'Privacy & Data Protection - Americas',
-      icon: <ShieldIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="US" />,
-          name: 'CCPA',
-          fullName: 'California Consumer Privacy Act',
-          description: 'California state law enhancing privacy rights for consumers'
-        },
-        {
-          badge: <RegionalBadge code="US" />,
-          name: 'COPPA',
-          fullName: 'Children\'s Online Privacy Protection Act',
-          description: 'US federal law protecting children\'s online privacy'
-        },
-        {
-          badge: <RegionalBadge code="CA" />,
-          name: 'PIPEDA',
-          fullName: 'Personal Information Protection and Electronic Documents Act',
-          description: 'Canadian federal privacy legislation for private sector'
-        },
-        {
-          badge: <RegionalBadge code="CA" />,
-          name: 'Bill 64',
-          fullName: 'Quebec Private Sector Privacy Reform',
-          description: 'Quebec\'s comprehensive privacy law, among Canada\'s strictest'
-        },
-        {
-          badge: <RegionalBadge code="CA" />,
-          name: 'AIDA',
-          fullName: 'Artificial Intelligence and Data Act',
-          description: 'Canada\'s proposed federal AI governance framework'
-        }
-      ]
-    },
-    {
-      title: 'Privacy & Data Protection - Europe',
-      icon: <ShieldIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="EU" />,
-          name: 'GDPR',
-          fullName: 'General Data Protection Regulation',
-          description: 'Comprehensive data protection law governing personal data processing in the EU'
-        },
-        {
-          badge: <RegionalBadge code="EU" />,
-          name: 'ePrivacy',
-          fullName: 'ePrivacy Regulation',
-          description: 'EU regulation on privacy in electronic communications'
-        },
-        {
-          badge: <RegionalBadge code="UK" />,
-          name: 'UK GDPR',
-          fullName: 'UK General Data Protection Regulation',
-          description: 'Post-Brexit data protection law for the United Kingdom'
-        },
-        {
-          badge: <RegionalBadge code="UK" />,
-          name: 'DPA 2018',
-          fullName: 'Data Protection Act 2018',
-          description: 'UK\'s implementation of GDPR and additional data protection provisions'
-        }
-      ]
-    },
-    {
-      title: 'Privacy & Data Protection - Asia Pacific',
-      icon: <ShieldIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="CN" />,
-          name: 'PIPL',
-          fullName: 'Personal Information Protection Law',
-          description: 'China\'s comprehensive personal data protection legislation'
-        },
-        {
-          badge: <RegionalBadge code="CN" />,
-          name: 'CSL',
-          fullName: 'Cybersecurity Law',
-          description: 'China\'s foundational cybersecurity and data protection framework'
-        },
-        {
-          badge: <RegionalBadge code="JP" />,
-          name: 'APPI',
-          fullName: 'Act on Protection of Personal Information',
-          description: 'Japan\'s primary personal information protection legislation'
-        },
-        {
-          badge: <RegionalBadge code="KR" />,
-          name: 'PIPA',
-          fullName: 'Personal Information Protection Act',
-          description: 'South Korea\'s comprehensive personal data protection law'
-        },
-        {
-          badge: <RegionalBadge code="SG" />,
-          name: 'PDPA',
-          fullName: 'Personal Data Protection Act',
-          description: 'Singapore\'s comprehensive personal data protection framework'
-        },
-        {
-          badge: <RegionalBadge code="AU" />,
-          name: 'Privacy Act',
-          fullName: 'Privacy Act 1988 (2022 Amendment)',
-          description: 'Australia\'s updated privacy legislation with enhanced penalties'
-        },
-        {
-          badge: <RegionalBadge code="NZ" />,
-          name: 'Privacy Act',
-          fullName: 'Privacy Act 2020',
-          description: 'New Zealand\'s modernized privacy protection framework'
-        },
-        {
-          badge: <RegionalBadge code="IN" />,
-          name: 'DPDP Act',
-          fullName: 'Digital Personal Data Protection Act 2023',
-          description: 'India\'s comprehensive digital data protection legislation'
-        }
-      ]
-    },
-    {
-      title: 'Privacy & Data Protection - Middle East',
-      icon: <ShieldIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="UAE" />,
-          name: 'Federal DPL',
-          fullName: 'UAE Federal Data Protection Law',
-          description: 'United Arab Emirates comprehensive data protection framework'
-        },
-        {
-          badge: <RegionalBadge code="SA" />,
-          name: 'PDPL',
-          fullName: 'Personal Data Protection Law',
-          description: 'Saudi Arabia\'s personal data protection legislation'
-        },
-        {
-          badge: <RegionalBadge code="QA" />,
-          name: 'DPL',
-          fullName: 'Qatar Data Protection Law',
-          description: 'Qatar\'s data protection and privacy framework'
-        },
-        {
-          badge: <RegionalBadge code="EG" />,
-          name: 'DPL',
-          fullName: 'Egypt Data Protection Law',
-          description: 'Egypt\'s emerging data protection legislation'
-        }
-      ]
-    },
-    {
-      title: 'Accessibility Standards',
-      icon: <AccessibilityIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="INT" />,
-          name: 'WCAG 2.2',
-          fullName: 'Web Content Accessibility Guidelines',
-          description: 'International standard for web accessibility and inclusive design'
-        },
-        {
-          badge: <RegionalBadge code="US" />,
-          name: 'ADA',
-          fullName: 'Americans with Disabilities Act',
-          description: 'US federal law prohibiting discrimination based on disability'
-        },
-        {
-          badge: <RegionalBadge code="US" />,
-          name: 'Section 508',
-          fullName: 'US Federal Accessibility Standards',
-          description: 'Federal law requiring accessible technology for government agencies'
-        },
-        {
-          badge: <RegionalBadge code="EU" />,
-          name: 'EN 301 549',
-          fullName: 'European Accessibility Standard',
-          description: 'European standard for ICT accessibility requirements'
-        },
-        {
-          badge: <RegionalBadge code="UK" />,
-          name: 'Equality Act',
-          fullName: 'UK Equality Act 2010',
-          description: 'UK legislation protecting against discrimination and promoting equality'
-        }
-      ]
-    },
-    {
-      title: 'AI & Emerging Tech',
-      icon: <CircuitIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="EU" />,
-          name: 'EU AI Act',
-          fullName: 'Artificial Intelligence Act',
-          description: 'Comprehensive AI regulation framework for risk-based governance'
-        },
-        {
-          badge: <RegionalBadge code="CN" />,
-          name: 'AI Provisions',
-          fullName: 'Algorithm Recommendation Management Provisions',
-          description: 'China\'s regulations governing AI and algorithmic systems'
-        },
-        {
-          badge: <RegionalBadge code="SG" />,
-          name: 'Model AI',
-          fullName: 'Model AI Governance Framework',
-          description: 'Singapore\'s voluntary framework for responsible AI deployment'
-        },
-        {
-          badge: <RegionalBadge code="INT" />,
-          name: 'ISO/IEC 23053',
-          fullName: 'Framework for AI using ML',
-          description: 'International framework for trustworthy AI and machine learning'
-        },
-        {
-          badge: <RegionalBadge code="AU" />,
-          name: 'AI Ethics',
-          fullName: 'AI Ethics Framework',
-          description: 'Australia\'s principles for responsible AI development'
-        }
-      ]
-    },
-    {
-      title: 'Industry Standards',
-      icon: <CertificateIcon />,
-      standards: [
-        {
-          badge: <RegionalBadge code="INT" />,
-          name: 'ISO 27001',
-          fullName: 'Information Security Management',
-          description: 'International standard for information security management systems'
-        },
-        {
-          badge: <RegionalBadge code="INT" />,
-          name: 'SOC 2',
-          fullName: 'Service Organization Control',
-          description: 'Auditing standard for service organizations\' security controls'
-        },
-        {
-          badge: <RegionalBadge code="INT" />,
-          name: 'Privacy by Design',
-          fullName: 'Privacy Framework',
-          description: 'Proactive approach to embedding privacy into system design'
-        },
-        {
-          badge: <RegionalBadge code="US" />,
-          name: 'NIST Framework',
-          fullName: 'Cybersecurity Framework',
-          description: 'US framework for improving critical infrastructure cybersecurity'
-        },
-        {
-          badge: <RegionalBadge code="AU" />,
-          name: 'CDR',
-          fullName: 'Consumer Data Right',
-          description: 'Australia\'s open banking and data portability framework'
-        }
-      ]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-beige-50">
@@ -320,57 +48,384 @@ const Standards = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-light text-foreground mb-6 leading-tight">
-              Global Compliance Standards
-              <br />
-              <span className="text-muted-foreground">We Audit Against</span>
+              EU AI Act & GDPR Requirements
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive coverage across 70+ regulations in 40+ jurisdictions worldwide, 
-              ensuring your compliance spans all relevant markets.
+              Complete compliance framework for EU digital regulations
             </p>
           </div>
         </section>
 
-        {/* Standards Categories */}
+        {/* EU AI Act Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto space-y-16">
-            {standardsCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="space-y-8">
-                <div className="flex items-center justify-center mb-12">
-                  <div className="flex items-center gap-3">
-                    <div className="text-gray-600 hover:text-accent transition-colors duration-300">
-                      {category.icon}
-                    </div>
-                    <h2 className="text-3xl font-light text-foreground">
-                      {category.title}
-                    </h2>
-                  </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-center mb-12">
+              <div className="flex items-center gap-3">
+                <div className="text-blue-600">
+                  <CircuitIcon />
                 </div>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.standards.map((standard, standardIndex) => (
-                    <div 
-                      key={standardIndex}
-                      className="bg-card rounded-xl shadow-zen border border-border/50 p-8 hover:shadow-zen-lg transition-all duration-300 hover:-translate-y-1 group"
-                    >
-                      <div className="flex items-center mb-4">
-                        <div className="mr-3 text-gray-600 group-hover:text-accent transition-colors duration-300">
-                          {standard.badge}
+                <h2 className="text-3xl font-light text-foreground">
+                  EU AI Act Compliance
+                </h2>
+              </div>
+            </div>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              The world's first comprehensive AI regulation
+            </p>
+            
+            <div className="zen-card">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="risk-categories">
+                  <AccordionTrigger className="text-left">Risk Categories</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4">
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <h4 className="font-semibold text-red-800 mb-2">Unacceptable Risk</h4>
+                        <p className="text-red-700">Social scoring, real-time biometric identification in public spaces</p>
+                      </div>
+                      <div className="p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                        <h4 className="font-semibold text-orange-800 mb-2">High Risk</h4>
+                        <p className="text-orange-700">Employment AI, education systems, law enforcement, migration and asylum</p>
+                      </div>
+                      <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <h4 className="font-semibold text-yellow-800 mb-2">Limited Risk</h4>
+                        <p className="text-yellow-700">Chatbots, emotion recognition, deepfakes (transparency obligations)</p>
+                      </div>
+                      <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <h4 className="font-semibold text-green-800 mb-2">Minimal Risk</h4>
+                        <p className="text-green-700">AI-enabled games, spam filters, recommendation systems</p>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="high-risk-requirements">
+                  <AccordionTrigger className="text-left">Requirements for High-Risk AI</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Risk management system</span>
                         </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground text-lg">{standard.name}</h3>
-                          <p className="text-sm text-muted-foreground">{standard.fullName}</p>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Data governance and quality</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Technical documentation</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Record-keeping</span>
                         </div>
                       </div>
-                      
-                      <p className="text-muted-foreground leading-relaxed">
-                        {standard.description}
-                      </p>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Transparency and user information</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Human oversight</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Accuracy, robustness, and cybersecurity</span>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="provider-obligations">
+                  <AccordionTrigger className="text-left">Provider Obligations</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Conformity assessments</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>CE marking requirements</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Post-market monitoring</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Incident reporting</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Registration in EU database</span>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="timeline-penalties">
+                  <AccordionTrigger className="text-left">Timeline & Penalties</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4">
+                      <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                        <h4 className="font-semibold text-blue-800 mb-2">Full Enforcement: 2026</h4>
+                        <p className="text-blue-700">Complete implementation of all AI Act requirements</p>
+                      </div>
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <h4 className="font-semibold text-red-800 mb-2">Penalties</h4>
+                        <p className="text-red-700">Up to €35M or 7% of global annual turnover (whichever is higher)</p>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* GDPR Section */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-center mb-12">
+              <div className="flex items-center gap-3">
+                <div className="text-blue-600">
+                  <ShieldIcon />
+                </div>
+                <h2 className="text-3xl font-light text-foreground">
+                  GDPR Compliance
+                </h2>
+              </div>
+            </div>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Comprehensive data protection for EU citizens
+            </p>
+            
+            <div className="zen-card">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="key-principles">
+                  <AccordionTrigger className="text-left">Key Principles</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Lawfulness, fairness, transparency</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Purpose limitation</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Data minimization</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Accuracy</span>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Storage limitation</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Integrity and confidentiality</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Accountability</span>
+                        </div>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="lawful-basis">
+                  <AccordionTrigger className="text-left">Lawful Basis</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Consent</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Contract</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Legal obligation</span>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Vital interests</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Public task</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span>Legitimate interests</span>
+                        </div>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="data-subject-rights">
+                  <AccordionTrigger className="text-left">Data Subject Rights</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Right to access</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Right to rectification</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Right to erasure ('right to be forgotten')</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Right to restrict processing</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Right to data portability</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Right to object</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Rights related to automated decision-making</span>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="organizational-requirements">
+                  <AccordionTrigger className="text-left">Organizational Requirements</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Privacy by Design and Default</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Data Protection Impact Assessments (DPIA)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Data Protection Officer (DPO)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Records of processing activities</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Security measures</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Breach notification (72 hours)</span>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="international-transfers">
+                  <AccordionTrigger className="text-left">International Transfers</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Adequacy decisions</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Standard Contractual Clauses (SCCs)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Binding Corporate Rules (BCRs)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>Derogations</span>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="gdpr-penalties">
+                  <AccordionTrigger className="text-left">Penalties</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <h4 className="font-semibold text-red-800 mb-2">Maximum Penalties</h4>
+                      <p className="text-red-700">Up to €20M or 4% of global annual turnover (whichever is higher)</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Intersection Section */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-center mb-12">
+              <div className="flex items-center gap-3">
+                <div className="text-blue-600">
+                  <LinkIcon />
+                </div>
+                <h2 className="text-3xl font-light text-foreground">
+                  AI Act + GDPR Intersection
+                </h2>
+              </div>
+            </div>
+            
+            <div className="zen-card">
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p>AI systems must comply with BOTH regulations when processing personal data</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p>GDPR applies to personal data in AI training datasets and operational data</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p>AI Act adds specific requirements for AI transparency and explainability</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p>Double penalties possible for non-compliance with both frameworks</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p>Combined documentation requirements for technical and privacy assessments</p>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
@@ -379,18 +434,18 @@ const Standards = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="zen-card">
               <h2 className="text-3xl font-light text-foreground mb-4">
-                Ready for global certification?
+                Need help navigating EU AI Act and GDPR compliance?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Our expert team will guide you through compliance requirements 
-                across all relevant standards for your platform and target markets.
+                Our expert team will guide you through both regulatory frameworks 
+                to ensure complete EU compliance for your AI systems and data processing.
               </p>
               <Button 
                 asChild
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-12 py-6 text-lg"
               >
-                <Link to="/start-audit">Start Your Global Audit</Link>
+                <Link to="/start-audit">Start Your EU Compliance Audit</Link>
               </Button>
             </div>
           </div>
