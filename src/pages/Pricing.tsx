@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check, AlertTriangle, Lightbulb } from 'lucide-react';
+import { Check, AlertTriangle, Lightbulb, Plus } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -139,7 +139,7 @@ const Pricing = () => {
           </p>
 
           {/* Market Context Box */}
-          <Card className="max-w-4xl mx-auto mb-16 border-2 border-accent/20 bg-accent/5">
+          <Card className="max-w-4xl mx-auto mb-8 border-2 border-accent/20 bg-accent/5">
             <CardContent className="pt-6">
               <div className="flex items-start gap-3">
                 <Lightbulb className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -150,6 +150,50 @@ const Pricing = () => {
                     <br />
                     <strong>We deliver better, faster, for less.</strong>
                   </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Special Pricing Banner */}
+          <Card className="max-w-4xl mx-auto mb-16 border-2 border-blue-200 bg-blue-50/50">
+            <CardContent className="pt-6">
+              <div className="flex items-start gap-3 mb-4">
+                <Plus className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                <div className="text-left w-full">
+                  <h3 className="text-lg font-semibold text-foreground mb-3">
+                    Special Pricing for Small Organizations
+                  </h3>
+                  
+                  <p className="text-muted-foreground mb-4">
+                    We believe EU compliance should be accessible to everyone. If you're a small organization, we offer special rates:
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div className="bg-card p-4 rounded-lg border border-border">
+                      <h4 className="font-semibold text-foreground">NGOs & Non-Profits</h4>
+                      <p className="text-2xl font-bold text-green-600">£50</p>
+                      <p className="text-sm text-muted-foreground">Basic GDPR compliance check</p>
+                    </div>
+                    
+                    <div className="bg-card p-4 rounded-lg border border-border">
+                      <h4 className="font-semibold text-foreground">Local Businesses (≤2 people)</h4>
+                      <p className="text-2xl font-bold text-green-600">£100</p>
+                      <p className="text-sm text-muted-foreground">Essential GDPR compliance review</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-muted-foreground italic mb-4">
+                    * Available for registered NGOs, public educational institutions, and local businesses with 2 or fewer employees. 
+                    Private educational institutions are not eligible. Verification required.
+                  </p>
+                  
+                  <a 
+                    href="mailto:contact@merlaz.com?subject=Special%20Pricing%20Request&body=Organization%20Type:%20%0ANumber%20of%20Employees:%20%0AWebsite:%20%0AGDPR%20Compliance%20Needs:" 
+                    className="text-blue-600 underline text-sm hover:text-blue-700 transition-colors"
+                  >
+                    Contact us for special pricing →
+                  </a>
                 </div>
               </div>
             </CardContent>
