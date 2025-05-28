@@ -55,6 +55,12 @@ const CTASection = () => {
           </Button>
           
           <p className="text-muted-foreground mt-4">Professional audits from £4,000 to £75,000</p>
+          
+          <div className="text-center mt-4">
+            <a href="mailto:contact@merlaz.com?subject=EU%20Compliance%20Inquiry" className="text-sm text-muted-foreground underline">
+              Prefer email? contact@merlaz.com
+            </a>
+          </div>
         </div>
       </div>
     </section>

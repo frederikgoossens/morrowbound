@@ -9,29 +9,6 @@ import { Link } from 'react-router-dom';
 import { Mail, Clock, MapPin } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    alert('Thank you for your message! We will get back to you within 24 hours.');
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <div className="min-h-screen bg-beige-50">
       <Navigation />
@@ -58,7 +35,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-2">
-                    Email: <a href="mailto:hello@morrowbound.com" className="text-accent hover:text-accent/80 transition-colors">hello@morrowbound.com</a>
+                    Email: <a href="mailto:contact@merlaz.com" className="text-accent hover:text-accent/80 transition-colors">contact@merlaz.com</a>
                   </p>
                   <p className="text-sm text-muted-foreground flex items-center gap-2">
                     <Clock size={16} />
@@ -79,7 +56,7 @@ const Contact = () => {
                     <Link to="/start-audit">Start Your Audit</Link>
                   </Button>
                   <p className="text-sm text-muted-foreground">
-                    Or email: <a href="mailto:audit@morrowbound.com" className="text-accent hover:text-accent/80 transition-colors">audit@morrowbound.com</a>
+                    Or email: <a href="mailto:contact@merlaz.com" className="text-accent hover:text-accent/80 transition-colors">contact@merlaz.com</a>
                   </p>
                 </CardContent>
               </Card>
@@ -98,7 +75,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">
                       Muggleman LTD<br />
                       London, United Kingdom<br />
-                      <a href="mailto:eu@morrowbound.com" className="text-accent hover:text-accent/80 transition-colors">eu@morrowbound.com</a>
+                      <a href="mailto:contact@merlaz.com" className="text-accent hover:text-accent/80 transition-colors">contact@merlaz.com</a>
                     </p>
                   </CardContent>
                 </Card>
@@ -114,7 +91,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">
                       Merlaz Limited<br />
                       Hong Kong<br />
-                      <a href="mailto:apac@morrowbound.com" className="text-accent hover:text-accent/80 transition-colors">apac@morrowbound.com</a>
+                      <a href="mailto:contact@merlaz.com" className="text-accent hover:text-accent/80 transition-colors">contact@merlaz.com</a>
                     </p>
                   </CardContent>
                 </Card>
@@ -128,7 +105,11 @@ const Contact = () => {
                   <CardTitle className="text-foreground">Send us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+                    <input type="hidden" name="access_key" value="88da350b-4eb7-4d98-9ca7-0458f69a1522" />
+                    <input type="hidden" name="subject" value="Morrowbound - Contact Form" />
+                    <input type="hidden" name="redirect" value="https://morrowbound.com/thank-you" />
+                    
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                         Name
@@ -138,8 +119,6 @@ const Contact = () => {
                         name="name"
                         type="text"
                         required
-                        value={formData.name}
-                        onChange={handleChange}
                         className="w-full"
                       />
                     </div>
@@ -153,23 +132,19 @@ const Contact = () => {
                         name="email"
                         type="email"
                         required
-                        value={formData.email}
-                        onChange={handleChange}
                         className="w-full"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                      <label htmlFor="inquiry_subject" className="block text-sm font-medium text-foreground mb-2">
                         Subject
                       </label>
                       <Input
-                        id="subject"
-                        name="subject"
+                        id="inquiry_subject"
+                        name="inquiry_subject"
                         type="text"
                         required
-                        value={formData.subject}
-                        onChange={handleChange}
                         className="w-full"
                       />
                     </div>
@@ -181,21 +156,25 @@ const Contact = () => {
                       <textarea
                         id="message"
                         name="message"
-                        rows={4}
+                        rows={5}
                         required
-                        value={formData.message}
-                        onChange={handleChange}
                         className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                    <button 
+                      type="submit"
+                      className="w-full inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-accent hover:bg-accent/90 text-accent-foreground h-10 px-4 py-2"
                     >
                       Send Message
-                    </Button>
+                    </button>
                   </form>
+                  
+                  <div className="text-center mt-4">
+                    <a href="mailto:contact@merlaz.com?subject=Contact%20Form%20Inquiry" className="text-sm text-muted-foreground underline">
+                      Prefer email? contact@merlaz.com
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>

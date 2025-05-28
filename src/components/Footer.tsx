@@ -30,6 +30,13 @@ const Footer = () => {
             </Link>
           </div>
           
+          <div className="text-center mb-6">
+            <p className="text-muted-foreground text-sm mb-2">
+              Questions? Email us: <a href="mailto:contact@merlaz.com" className="text-accent hover:text-accent/80 transition-colors underline">contact@merlaz.com</a>
+            </p>
+            <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
+          </div>
+          
           <p className="text-muted-foreground text-sm">
             © 2024 Morrowbound. Operated by Muggleman LTD (UK) & Merlaz Limited (HK). All rights reserved.
           </p>
