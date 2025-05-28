@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, AlertTriangle, Lightbulb, Plus } from 'lucide-react';
@@ -7,125 +6,56 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 const Pricing = () => {
-  const pricingTiers = [
-    {
-      name: "GDPR ONLY",
-      price: "£4,000",
-      delivery: "48-hour delivery",
-      description: "Perfect for businesses NOT using ANY AI",
-      popular: false,
-      features: [
-        "Businesses NOT using ANY AI",
-        "Websites, apps, SaaS platforms",
-        "Need rapid GDPR compliance",
-        "Avoiding AI complexity entirely"
-      ],
-      critical: [
-        "NO chatbots or virtual assistants",
-        "NO automated decision-making",
-        "NO AI/ML in any form",
-        "NO algorithmic processing",
-        "NO predictive analytics"
-      ],
-      includes: [
-        "Comprehensive GDPR audit",
-        "Data flow mapping & documentation",
-        "Privacy notice optimization",
-        "Cookie compliance assessment",
-        "Data subject rights procedures",
-        "Detailed remediation roadmap",
-        "30-day implementation support"
-      ],
-      buttonText: "Get GDPR Audit",
-      buttonVariant: "outline" as const
-    },
-    {
-      name: "PROFESSIONAL",
-      price: "£15,000",
-      delivery: "5-day delivery",
-      description: "Using AI tools (ChatGPT, Claude, etc.)",
-      marketComparison: "Others charge £30-100k",
-      popular: true,
-      features: [
-        "Using AI tools (ChatGPT, Claude, etc.)",
-        "Automated customer service",
-        "Recommendation systems",
-        "Limited/minimal risk AI"
-      ],
-      includes: [
-        "Everything in GDPR, plus:",
-        "Full EU AI Act compliance audit",
-        "Risk categorization assessment",
-        "Transparency requirements documentation",
-        "Human oversight protocols",
-        "Technical documentation package",
-        "Conformity assessment preparation",
-        "90-day expert support",
-        "Quarterly check-in (first year)"
-      ],
-      buttonText: "Get Full EU Audit",
-      buttonVariant: "default" as const
-    },
-    {
-      name: "ENTERPRISE",
-      price: "£75,000",
-      delivery: "30-day delivery",
-      description: "High-risk AI systems in regulated industries",
-      marketComparison: "Big 4 charge £150-500k",
-      popular: false,
-      features: [
-        "High-risk AI systems",
-        "Regulated industries (healthcare, finance, HR)",
-        "Multiple AI systems/models",
-        "Public sector applications"
-      ],
-      includes: [
-        "Everything in Professional, plus:",
-        "Deep-dive high-risk assessment",
-        "Full conformity assessment support",
-        "C-suite and technical reports",
-        "Board presentation materials",
-        "Complete documentation suite",
-        "Incident response playbooks",
-        "Monthly reviews (first year)",
-        "On-call compliance hotline",
-        "White-label everything",
-        "Legislative update service"
-      ],
-      buttonText: "Contact for Enterprise",
-      buttonVariant: "outline" as const
-    }
-  ];
-
-  const testimonials = [
-    "Saved our client €2M in potential fines",
-    "75% less than our Big 4 quote, 10x faster", 
-    "The only firm that truly understands AI Act"
-  ];
-
-  const faqItems = [
-    {
-      question: "Why the jump from GDPR to Professional?",
-      answer: "EU AI Act compliance is exponentially more complex, requiring rare expertise"
-    },
-    {
-      question: "How are you faster than Big 4 consultancies?",
-      answer: "Specialized focus, modern tools, no bureaucracy, expert team"
-    },
-    {
-      question: "Can we start with GDPR and add AI Act later?",
-      answer: "No - if you use ANY AI, you need Professional from the start"
-    },
-    {
-      question: "What if we're not sure about our AI usage?",
-      answer: "Book a free 15-minute consultation to determine the right tier"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-beige-50">
+  const pricingTiers = [{
+    name: "GDPR ONLY",
+    price: "£4,000",
+    delivery: "48-hour delivery",
+    description: "Perfect for businesses NOT using ANY AI",
+    popular: false,
+    features: ["Businesses NOT using ANY AI", "Websites, apps, SaaS platforms", "Need rapid GDPR compliance", "Avoiding AI complexity entirely"],
+    critical: ["NO chatbots or virtual assistants", "NO automated decision-making", "NO AI/ML in any form", "NO algorithmic processing", "NO predictive analytics"],
+    includes: ["Comprehensive GDPR audit", "Data flow mapping & documentation", "Privacy notice optimization", "Cookie compliance assessment", "Data subject rights procedures", "Detailed remediation roadmap", "30-day implementation support"],
+    buttonText: "Get GDPR Audit",
+    buttonVariant: "outline" as const
+  }, {
+    name: "PROFESSIONAL",
+    price: "£15,000",
+    delivery: "5-day delivery",
+    description: "Using AI tools (ChatGPT, Claude, etc.)",
+    marketComparison: "Others charge £30-100k",
+    popular: true,
+    features: ["Using AI tools (ChatGPT, Claude, etc.)", "Automated customer service", "Recommendation systems", "Limited/minimal risk AI"],
+    includes: ["Everything in GDPR, plus:", "Full EU AI Act compliance audit", "Risk categorization assessment", "Transparency requirements documentation", "Human oversight protocols", "Technical documentation package", "Conformity assessment preparation", "90-day expert support", "Quarterly check-in (first year)"],
+    buttonText: "Get Full EU Audit",
+    buttonVariant: "default" as const
+  }, {
+    name: "ENTERPRISE",
+    price: "£75,000",
+    delivery: "30-day delivery",
+    description: "High-risk AI systems in regulated industries",
+    marketComparison: "Big 4 charge £150-500k",
+    popular: false,
+    features: ["High-risk AI systems", "Regulated industries (healthcare, finance, HR)", "Multiple AI systems/models", "Public sector applications"],
+    includes: ["Everything in Professional, plus:", "Deep-dive high-risk assessment", "Full conformity assessment support", "C-suite and technical reports", "Board presentation materials", "Complete documentation suite", "Incident response playbooks", "Monthly reviews (first year)", "On-call compliance hotline", "White-label everything", "Legislative update service"],
+    buttonText: "Contact for Enterprise",
+    buttonVariant: "outline" as const
+  }];
+  const testimonials = ["Saved our client €2M in potential fines", "75% less than our Big 4 quote, 10x faster", "The only firm that truly understands AI Act"];
+  const faqItems = [{
+    question: "Why the jump from GDPR to Professional?",
+    answer: "EU AI Act compliance is exponentially more complex, requiring rare expertise"
+  }, {
+    question: "How are you faster than Big 4 consultancies?",
+    answer: "Specialized focus, modern tools, no bureaucracy, expert team"
+  }, {
+    question: "Can we start with GDPR and add AI Act later?",
+    answer: "No - if you use ANY AI, you need Professional from the start"
+  }, {
+    question: "What if we're not sure about our AI usage?",
+    answer: "Book a free 15-minute consultation to determine the right tier"
+  }];
+  return <div className="min-h-screen bg-beige-50">
       <Navigation />
       
       {/* Hero Section */}
@@ -188,12 +118,7 @@ const Pricing = () => {
                     Private educational institutions are not eligible. Verification required.
                   </p>
                   
-                  <a 
-                    href="mailto:contact@merlaz.com?subject=Special%20Pricing%20Request&body=Organization%20Type:%20%0ANumber%20of%20Employees:%20%0AWebsite:%20%0AGDPR%20Compliance%20Needs:" 
-                    className="text-blue-600 underline text-sm hover:text-blue-700 transition-colors"
-                  >
-                    Contact us for special pricing →
-                  </a>
+                  
                 </div>
               </div>
             </CardContent>
@@ -205,18 +130,10 @@ const Pricing = () => {
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <Card 
-                key={tier.name} 
-                className={`relative transition-all duration-300 hover:shadow-zen-lg hover:-translate-y-1 flex flex-col ${
-                  tier.popular ? 'ring-2 ring-accent scale-105' : ''
-                }`}
-              >
-                {tier.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground">
+            {pricingTiers.map((tier, index) => <Card key={tier.name} className={`relative transition-all duration-300 hover:shadow-zen-lg hover:-translate-y-1 flex flex-col ${tier.popular ? 'ring-2 ring-accent scale-105' : ''}`}>
+                {tier.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground">
                     Most Popular
-                  </Badge>
-                )}
+                  </Badge>}
                 
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-semibold text-foreground mb-2">
@@ -231,11 +148,9 @@ const Pricing = () => {
                   <CardDescription className="text-muted-foreground mb-2">
                     {tier.description}
                   </CardDescription>
-                  {tier.marketComparison && (
-                    <div className="text-sm text-accent font-medium">
+                  {tier.marketComparison && <div className="text-sm text-accent font-medium">
                       Market comparison: {tier.marketComparison}
-                    </div>
-                  )}
+                    </div>}
                 </CardHeader>
 
                 <CardContent className="pt-4 flex-1 flex flex-col">
@@ -244,65 +159,48 @@ const Pricing = () => {
                     <div className="mb-6">
                       <h4 className="font-semibold text-foreground mb-3">Perfect for:</h4>
                       <ul className="space-y-2">
-                        {tier.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-3">
+                        {tier.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-start gap-3">
                             <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
                             <span className="text-sm text-muted-foreground">{feature}</span>
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                     </div>
 
                     {/* Critical section for GDPR ONLY tier */}
-                    {tier.critical && (
-                      <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                    {tier.critical && <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
                         <div className="flex items-start gap-2 mb-3">
                           <AlertTriangle className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
                           <h4 className="font-semibold text-orange-800">Critical: This tier is ONLY for organizations with:</h4>
                         </div>
                         <ul className="space-y-1">
-                          {tier.critical.map((item, itemIndex) => (
-                            <li key={itemIndex} className="text-sm text-orange-700">
+                          {tier.critical.map((item, itemIndex) => <li key={itemIndex} className="text-sm text-orange-700">
                               • {item}
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
-                      </div>
-                    )}
+                      </div>}
 
                     {/* Includes section */}
                     <div className="mb-6">
                       <h4 className="font-semibold text-foreground mb-3">Includes:</h4>
                       <ul className="space-y-2">
-                        {tier.includes.map((include, includeIndex) => (
-                          <li key={includeIndex} className="flex items-start gap-3">
+                        {tier.includes.map((include, includeIndex) => <li key={includeIndex} className="flex items-start gap-3">
                             <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
                             <span className="text-sm text-muted-foreground">{include}</span>
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                     </div>
                   </div>
 
                   {/* Button aligned at bottom */}
                   <div className="mt-auto">
-                    <Button 
-                      asChild 
-                      variant={tier.buttonVariant}
-                      className={`w-full ${
-                        tier.popular 
-                          ? 'bg-accent hover:bg-accent/90 text-accent-foreground' 
-                          : ''
-                      }`}
-                    >
+                    <Button asChild variant={tier.buttonVariant} className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
                       <Link to="/start-audit">
                         {tier.buttonText}
                       </Link>
                     </Button>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -377,8 +275,7 @@ const Pricing = () => {
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            {faqItems.map((faq, index) => (
-              <Card key={index} className="zen-card">
+            {faqItems.map((faq, index) => <Card key={index} className="zen-card">
                 <CardContent className="pt-6">
                   <h3 className="font-semibold text-foreground mb-3">
                     Q: {faq.question}
@@ -387,8 +284,7 @@ const Pricing = () => {
                     A: {faq.answer}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -400,8 +296,7 @@ const Pricing = () => {
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="text-center">
+            {testimonials.map((testimonial, index) => <Card key={index} className="text-center">
                 <CardContent className="pt-6">
                   <p className="text-muted-foreground italic">"{testimonial}"</p>
                   <div className="mt-3 text-sm font-medium text-accent">
@@ -410,15 +305,12 @@ const Pricing = () => {
                     {index === 2 && "- Legal Director"}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Pricing;
