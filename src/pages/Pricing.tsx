@@ -164,7 +164,7 @@ const Pricing = () => {
             {pricingTiers.map((tier, index) => (
               <Card 
                 key={tier.name} 
-                className={`relative transition-all duration-300 hover:shadow-zen-lg hover:-translate-y-1 ${
+                className={`relative transition-all duration-300 hover:shadow-zen-lg hover:-translate-y-1 flex flex-col ${
                   tier.popular ? 'ring-2 ring-accent scale-105' : ''
                 }`}
               >
@@ -194,63 +194,68 @@ const Pricing = () => {
                   )}
                 </CardHeader>
 
-                <CardContent className="pt-4">
-                  {/* Perfect for section */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3">Perfect for:</h4>
-                    <ul className="space-y-2">
-                      {tier.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start gap-3">
-                          <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Critical section for GDPR ONLY tier */}
-                  {tier.critical && (
-                    <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
-                      <div className="flex items-start gap-2 mb-3">
-                        <AlertTriangle className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                        <h4 className="font-semibold text-orange-800">Critical: This tier is ONLY for organizations with:</h4>
-                      </div>
-                      <ul className="space-y-1">
-                        {tier.critical.map((item, itemIndex) => (
-                          <li key={itemIndex} className="text-sm text-orange-700">
-                            • {item}
+                <CardContent className="pt-4 flex-1 flex flex-col">
+                  <div className="flex-1">
+                    {/* Perfect for section */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3">Perfect for:</h4>
+                      <ul className="space-y-2">
+                        {tier.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-3">
+                            <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                            <span className="text-sm text-muted-foreground">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                  )}
 
-                  {/* Includes section */}
-                  <div className="mb-8">
-                    <h4 className="font-semibold text-foreground mb-3">Includes:</h4>
-                    <ul className="space-y-2">
-                      {tier.includes.map((include, includeIndex) => (
-                        <li key={includeIndex} className="flex items-start gap-3">
-                          <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{include}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Critical section for GDPR ONLY tier */}
+                    {tier.critical && (
+                      <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                        <div className="flex items-start gap-2 mb-3">
+                          <AlertTriangle className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                          <h4 className="font-semibold text-orange-800">Critical: This tier is ONLY for organizations with:</h4>
+                        </div>
+                        <ul className="space-y-1">
+                          {tier.critical.map((item, itemIndex) => (
+                            <li key={itemIndex} className="text-sm text-orange-700">
+                              • {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Includes section */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3">Includes:</h4>
+                      <ul className="space-y-2">
+                        {tier.includes.map((include, includeIndex) => (
+                          <li key={includeIndex} className="flex items-start gap-3">
+                            <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                            <span className="text-sm text-muted-foreground">{include}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
-                  <Button 
-                    asChild 
-                    variant={tier.buttonVariant}
-                    className={`w-full ${
-                      tier.popular 
-                        ? 'bg-accent hover:bg-accent/90 text-accent-foreground' 
-                        : ''
-                    }`}
-                  >
-                    <Link to="/start-audit">
-                      {tier.buttonText}
-                    </Link>
-                  </Button>
+                  {/* Button aligned at bottom */}
+                  <div className="mt-auto">
+                    <Button 
+                      asChild 
+                      variant={tier.buttonVariant}
+                      className={`w-full ${
+                        tier.popular 
+                          ? 'bg-accent hover:bg-accent/90 text-accent-foreground' 
+                          : ''
+                      }`}
+                    >
+                      <Link to="/start-audit">
+                        {tier.buttonText}
+                      </Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
